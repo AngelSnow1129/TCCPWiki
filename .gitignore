@@ -1,0 +1,26 @@
+# MkDocs build output
+site/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 根目录下的 md 文件（只保留 docs 目录）
+/*.md
+/short1.md
+./*.md
+
