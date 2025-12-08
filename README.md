@@ -1,13 +1,13 @@
 # 腾讯云架构师认证 (TCCP) 学习指南
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-在线阅读-blue?logo=github)](https://angelsnow1129.github.io/tccp-study-guide/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-在线阅读-blue?logo=github)](https://angelsnow1129.github.io/TCCPWiki/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-> 🎯 系统学习腾讯云架构设计，备战 TCCP 认证考试
+> 🎯 系统学习腾讯云架构设计，备战 TCA（云架构工程师）/ TCP（云架构专家）认证考试
 
 ## 📖 在线阅读
 
-**👉 [点击访问 Wiki 站点](https://angelsnow1129.github.io/tccp-study-guide/)**
+**👉 [点击访问 Wiki 站点](https://angelsnow1129.github.io/TCCPWiki/)**
 
 ## 📚 内容概览
 
@@ -65,7 +65,16 @@ mkdocs build
 ## 🔗 相关资源
 
 - [腾讯云官方文档](https://cloud.tencent.com/document)
-- [腾讯云架构师认证](https://cloud.tencent.com/edu/cert)
+- [腾讯云架构师认证培训](https://cloud.tencent.com/edu/training/cert/detail?type=CAS)
+
+## 📜 认证体系说明
+
+腾讯云架构师认证分为两个级别：
+
+| 认证 | 全称 | 定位 | 考试内容 |
+|------|------|------|----------|
+| **TCA** | 云架构工程师 | 中级 | 云产品使用、基础架构设计 |
+| **TCP** | 云架构专家 | 高级 | 复杂架构设计、最佳实践、成本优化 |
 
 ---
 
