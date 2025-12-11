@@ -9,6 +9,13 @@
 
 **👉 [点击访问 Wiki 站点](https://angelsnow1129.github.io/TCCPWiki/)**
 
+## 📥 资料下载
+
+| 资源 | 说明 | 下载链接 |
+|------|------|----------|
+| 📊 **PPT 课件** | 全部 29 节课程 PPT (628MB) | [GitHub Release 下载](https://github.com/AngelSnow1129/TCCPWiki/releases/tag/v1.0.0) |
+| 📖 **在线文档** | Wiki 站点 | [在线阅读](https://angelsnow1129.github.io/TCCPWiki/) |
+
 ## 📚 内容概览
 
 ### 第一章：云架构设计基础
