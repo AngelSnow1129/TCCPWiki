@@ -1,0 +1,2058 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="腾讯云架构师认证考试学习资料与知识点整理">
+      
+      
+        <meta name="author" content="AngelSnow">
+      
+      
+        <link rel="canonical" href="https://angelsnow1129.github.io/TCCPWiki/chapter2/2.16_%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%2B%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6%E6%9C%8D%E5%8A%A1%2BSSL%E8%AF%81%E4%B9%A6%E6%9C%8D%E5%8A%A1/">
+      
+      
+        <link rel="prev" href="../2.15_Serverless%E4%BA%91%E5%87%BD%E6%95%B0%E6%A6%82%E8%BF%B0%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">
+      
+      
+        <link rel="next" href="../2.17_%E8%85%BE%E8%AE%AF%E4%BA%91%E5%8F%AF%E8%A7%82%E6%B5%8B%E5%B9%B3%E5%8F%B0/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>2.16 域名与证书 - 腾讯云架构师认证 (TCCP) 学习指南</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#216-ssl" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="腾讯云架构师认证 (TCCP) 学习指南" class="md-header__button md-logo" aria-label="腾讯云架构师认证 (TCCP) 学习指南" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            腾讯云架构师认证 (TCCP) 学习指南
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2.16 域名与证书
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/AngelSnow1129/TCCPWiki" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AngelSnow1129/TCCPWiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapter1/1.1_%E4%BA%91%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%AE%BA/" class="md-tabs__link">
+          
+  
+  
+  第一章 云架构设计基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../2.1_%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8CVM%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-tabs__link">
+          
+  
+  
+  第二章 核心产品与服务
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapter3/3.1_%E4%BA%91%E4%B8%8A%E5%AE%B9%E7%81%BE/" class="md-tabs__link">
+          
+  
+  
+  第三章 架构设计实践
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapter4/4.1_%E5%9B%BD%E5%AE%B6%E5%AE%89%E5%85%A8%E7%AD%89%E7%BA%A7%E4%BF%9D%E6%8A%A4/" class="md-tabs__link">
+          
+  
+  
+  第四章 云安全体系
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapter5/5.1_%E8%BF%81%E7%A7%BB%E6%96%B9%E6%B3%95%E8%AE%BA%E6%A6%82%E8%BF%B0/" class="md-tabs__link">
+          
+  
+  
+  第五章 云迁移与成本
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E7%9F%A5%E8%AF%86%E7%82%B9%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  📋 知识点大纲
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="腾讯云架构师认证 (TCCP) 学习指南" class="md-nav__button md-logo" aria-label="腾讯云架构师认证 (TCCP) 学习指南" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    腾讯云架构师认证 (TCCP) 学习指南
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/AngelSnow1129/TCCPWiki" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AngelSnow1129/TCCPWiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章 云架构设计基础
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第一章 云架构设计基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter1/1.1_%E4%BA%91%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1 云架构设计概论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章 核心产品与服务
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第二章 核心产品与服务
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.1_%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8CVM%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.1 云服务器 CVM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.2_%E5%BC%B9%E6%80%A7%E4%BC%B8%E7%BC%A9AS%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.2 弹性伸缩 AS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.3_%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1TKE%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.3 容器服务 TKE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.4_%E7%A7%81%E6%9C%89%E7%BD%91%E7%BB%9C%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.4 私有网络 VPC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.5_%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.5 负载均衡 CLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.6_%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91%E7%BD%91%E7%BB%9C%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.6 内容分发 CDN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.7_%E4%BA%91%E5%AD%98%E5%82%A8%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.7 云存储
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.8_%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1CLS%E4%BB%8B%E7%BB%8D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.8 日志服务 CLS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.9_%E4%BA%91%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.9 云数据库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.10_%E4%BC%81%E4%B8%9A%E7%BA%A7%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93TDSQL%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.10 TDSQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.11_%E4%BA%91%E5%8E%9F%E7%94%9FTDSQL-C%2B%E4%BA%91%E6%95%B0%E6%8D%AE%E5%BA%93Redis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.11 TDSQL-C & Redis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.12_%E4%BA%91Redis%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%2B%E5%85%B6%E4%BB%96NoSQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.12 Redis 最佳实践
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.13_%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.13 消息队列 TDMQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.14_%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A6%82%E8%BF%B0%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.14 微服务
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.15_Serverless%E4%BA%91%E5%87%BD%E6%95%B0%E6%A6%82%E8%BF%B0%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.15 Serverless SCF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.16 域名与证书
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.16 域名与证书
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        课程简介
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="课程简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        学习目标
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.17_%E8%85%BE%E8%AE%AF%E4%BA%91%E5%8F%AF%E8%A7%82%E6%B5%8B%E5%B9%B3%E5%8F%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.17 可观测平台
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章 架构设计实践
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第三章 架构设计实践
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter3/3.1_%E4%BA%91%E4%B8%8A%E5%AE%B9%E7%81%BE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.1 云上容灾
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter3/3.2_%E4%BA%91%E4%B8%8A%E6%9E%B6%E6%9E%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.2 性能优化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter3/3.3_%E5%BA%94%E7%94%A8%E5%AE%B9%E5%99%A8%E5%8C%96%E6%94%B9%E9%80%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.3 容器化改造
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter3/3.4_AI%E5%92%8C%E5%A4%A7%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.4 AI 与大模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章 云安全体系
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第四章 云安全体系
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter4/4.1_%E5%9B%BD%E5%AE%B6%E5%AE%89%E5%85%A8%E7%AD%89%E7%BA%A7%E4%BF%9D%E6%8A%A4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.1 等级保护
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter4/4.2_%E4%BA%91%E5%AE%89%E5%85%A8%E4%BD%93%E7%B3%BB%E4%B8%8E%E6%A0%87%E5%87%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.2 安全体系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter4/4.3_%E6%9E%84%E5%BB%BA%E5%AE%89%E5%85%A8%E9%80%9A%E4%BF%A1%E7%BD%91%E7%BB%9C%E5%8F%8A%E5%AE%89%E5%85%A8%E5%8C%BA%E5%9F%9F%E8%BE%B9%E7%95%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.3 网络边界安全
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter4/4.4_%E6%9E%84%E5%BB%BA%E5%AE%89%E5%85%A8%E8%AE%A1%E7%AE%97%E7%8E%AF%E5%A2%83%E5%8F%8A%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E4%B8%AD%E5%BF%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.4 计算环境安全
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章 云迁移与成本
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第五章 云迁移与成本
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter5/5.1_%E8%BF%81%E7%A7%BB%E6%96%B9%E6%B3%95%E8%AE%BA%E6%A6%82%E8%BF%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.1 迁移方法论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter5/5.2_%E4%BA%91%E7%BB%84%E4%BB%B6%E4%B8%8E%E8%BF%81%E7%A7%BB%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.2 迁移工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter5/5.3_%E8%BF%81%E7%A7%BB%E6%A1%88%E4%BE%8B%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%BA%91%E4%B8%8A%E8%B5%84%E6%BA%90%E6%88%90%E6%9C%AC%E7%AE%A1%E7%90%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.3 成本管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%9F%A5%E8%AF%86%E7%82%B9%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 知识点大纲
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        课程简介
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="课程简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        学习目标
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="216-ssl">2.16 域名服务 + 数字证书服务 + SSL 证书服务<a class="headerlink" href="#216-ssl" title="Permanent link">&para;</a></h1>
+<h2 id="_1">课程简介<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>本课程将深入讲解企业上云必备的三大基础服务：<strong>域名解析服务 (DNS)</strong>、<strong>数字证书服务</strong>以及<strong>SSL 证书服务</strong>。它们构成了互联网访问的入口与安全基石。我们将从底层原理出发，解析 DNS 查询全过程，探讨移动端解析痛点（HTTPDNS），并详细解读 HTTPS 加密通信背后的证书机制及国密改造方案。</p>
+<h3 id="_2">学习目标<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>通过本课程的学习，您将能够：</p>
+<ul>
+<li>✓ <strong>掌握 DNS 原理</strong>：深入理解域名解析的完整流程、递归查询与迭代查询的区别。</li>
+<li>✓ <strong>熟悉云解析</strong>：了解腾讯云 DNSPod 的智能调度、负载均衡及安全防护能力。</li>
+<li>✓ <strong>解决移动端痛点</strong>：理解 HTTPDNS 如何解决 LocalDNS 劫持和跨网访问问题。</li>
+<li>✓ <strong>精通证书管理</strong>：掌握 SSL 证书的分类（DV/OV/EV）、申请流程及国密（SM2）证书的应用场景。</li>
+<li>✓ <strong>实施国密改造</strong>：学会构建“国密 + 国际”双证书自适应的安全架构。</li>
+</ul>
+<hr />
+<h1 id="dns">第一部分：域名服务与 DNS 解析<a class="headerlink" href="#dns" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>本部分导读</strong><br />
+域名是互联网的门牌号，DNS 是导航系统。了解它们的工作原理是构建高可用网络应用的前提。</p>
+</blockquote>
+<h2 id="dns_1">一、DNS 基础概念<a class="headerlink" href="#dns_1" title="Permanent link">&para;</a></h2>
+<h3 id="11-dns">1.1 什么是 DNS？<a class="headerlink" href="#11-dns" title="Permanent link">&para;</a></h3>
+<p>域名系统（Domain Name System，DNS）是互联网的“电话簿”。它将人类可读的域名（如 <code>cloud.tencent.com</code>）转换为机器可读的 IP 地址（如 <code>14.116.174.125</code>）。</p>
+<h3 id="12-the-journey-of-a-dns-query">1.2 域名解析流程 (The Journey of a DNS Query)<a class="headerlink" href="#12-the-journey-of-a-dns-query" title="Permanent link">&para;</a></h3>
+<p>当你在浏览器输入一个域名时，幕后发生了什么？</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sequenceDiagram
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    participant User as 用户浏览器
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    participant LocalDNS as 本地 DNS (运营商)
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    participant Root as 根域名服务器 (.)
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    participant TLD as 顶级域名服务器 (.com)
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    participant Auth as 权威 DNS 服务器 (tencent.com)
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    User-&gt;&gt;LocalDNS: 查询 cloud.tencent.com 的 IP
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    LocalDNS--&gt;&gt;User: (如果缓存命中) 返回 IP
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    Note over LocalDNS, Root: 缓存未命中，开始迭代查询
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    LocalDNS-&gt;&gt;Root: 问：cloud.tencent.com 的 IP 是多少？
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    Root--&gt;&gt;LocalDNS: 我不知道，你去问 .com 顶级域服务器 (IP: 219.1.3.x)
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    LocalDNS-&gt;&gt;TLD: 问：cloud.tencent.com 的 IP 是多少？
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    TLD--&gt;&gt;LocalDNS: 我不知道，你去问 tencent.com 权威服务器 (IP: 205.1.0.x)
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    LocalDNS-&gt;&gt;Auth: 问：cloud.tencent.com 的 IP 是多少？
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    Auth--&gt;&gt;LocalDNS: 知道，IP 是 14.116.174.125
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    LocalDNS-&gt;&gt;User: 返回最终 IP: 14.116.174.125
+</code></pre></div>
+<ol>
+<li><strong>本地缓存</strong>：浏览器/操作系统首先检查本地缓存。</li>
+<li><strong>递归查询</strong>：向<strong>本地 DNS (LocalDNS)</strong> 发起请求。LocalDNS 通常由运营商提供，负责替用户跑腿。</li>
+<li><strong>迭代查询</strong>：<ul>
+<li>问 <strong>根域名服务器</strong> -&gt; 得到 <strong>顶级域 (.com)</strong> 地址。</li>
+<li>问 <strong>顶级域服务器</strong> -&gt; 得到 <strong>权威域 (tencent.com)</strong> 地址。</li>
+<li>问 <strong>权威 DNS 服务器</strong> -&gt; 得到最终 IP。</li>
+</ul>
+</li>
+</ol>
+<h2 id="dns_2">二、常见 DNS 记录类型<a class="headerlink" href="#dns_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">记录类型</th>
+<th style="text-align: left;">全称</th>
+<th style="text-align: left;">作用</th>
+<th style="text-align: left;">示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>A</strong></td>
+<td style="text-align: left;">Address</td>
+<td style="text-align: left;">将域名指向 IPv4 地址</td>
+<td style="text-align: left;"><code>www.example.com</code> -&gt; <code>192.0.2.1</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>AAAA</strong></td>
+<td style="text-align: left;">Address v6</td>
+<td style="text-align: left;">将域名指向 IPv6 地址</td>
+<td style="text-align: left;"><code>www.example.com</code> -&gt; <code>2001:0db8::1</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CNAME</strong></td>
+<td style="text-align: left;">Canonical Name</td>
+<td style="text-align: left;">别名记录，指向另一个域名</td>
+<td style="text-align: left;"><code>blog.example.com</code> -&gt; <code>example.com</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>MX</strong></td>
+<td style="text-align: left;">Mail Exchange</td>
+<td style="text-align: left;">邮件交换记录，指定邮件服务器</td>
+<td style="text-align: left;">接收 <code>@example.com</code> 的邮件</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TXT</strong></td>
+<td style="text-align: left;">Text</td>
+<td style="text-align: left;">文本记录，常用于 SPF 反垃圾邮件验证</td>
+<td style="text-align: left;"><code>v=spf1 include:spf.mail.qq.com -all</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>NS</strong></td>
+<td style="text-align: left;">Name Server</td>
+<td style="text-align: left;">指定该域名的权威解析服务器</td>
+<td style="text-align: left;"><code>ns1.dnspod.net</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SRV</strong></td>
+<td style="text-align: left;">Service</td>
+<td style="text-align: left;">定义特定服务的端口和主机</td>
+<td style="text-align: left;">用于 SIP/XMPP 等服务</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>PTR</strong></td>
+<td style="text-align: left;">Pointer</td>
+<td style="text-align: left;">反向解析，IP -&gt; 域名</td>
+<td style="text-align: left;">邮件服务器反垃圾验证</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dnspod">三、腾讯云 DNSPod 解析服务<a class="headerlink" href="#dnspod" title="Permanent link">&para;</a></h2>
+<p>腾讯云基于 DNSPod 提供企业级 DNS 解析服务。</p>
+<h3 id="31">3.1 核心功能<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>智能解析</strong>：根据用户地域和运营商（移动/联通/电信），返回最近的服务器 IP，实现就近接入。</li>
+<li><strong>负载均衡</strong>：一个域名对应多个 IP，轮询返回，分担流量。</li>
+<li><strong>宕机切换</strong>：实时监控服务器健康状态，发现故障 IP 自动切换，秒级生效。</li>
+<li><strong>安全防护</strong>：内置 DNS 防攻击能力，抵御 DNS Flood 等攻击。</li>
+</ul>
+<h3 id="32-httpdns">3.2 移动解析 HTTPDNS<a class="headerlink" href="#32-httpdns" title="Permanent link">&para;</a></h3>
+<p><strong>痛点</strong>：传统 LocalDNS 存在<strong>域名劫持</strong>（解析到广告页）和<strong>调度不准</strong>（跨网访问慢）的问题。</p>
+<p><strong>解决方案</strong>：
+- App 直接通过 <strong>HTTP 协议</strong> 向腾讯云 DNS 服务器发送解析请求（如 <code>http://119.29.29.29/d?dn=www.qq.com</code>）。
+- <strong>绕过运营商 LocalDNS</strong>，根治劫持。
+- 获取客户端真实 IP，实现<strong>精准调度</strong>。</p>
+<hr />
+<h1 id="ssl">第二部分：数字证书与 SSL 证书服务<a class="headerlink" href="#ssl" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>本部分导读</strong><br />
+HTTP 是明文传输的，极易被窃听。HTTPS = HTTP + SSL/TLS，通过数字证书实现身份验证和加密传输。</p>
+</blockquote>
+<h2 id="_3">一、数字证书基础<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="11">1.1 什么是数字证书？<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p>数字证书是互联网上的“电子身份证”。它由受信任的第三方机构（CA，Certificate Authority）签发，用于证明公钥持有者的身份。</p>
+<p><strong>证书包含的关键信息：</strong>
+- <strong>持有者信息</strong>：域名、公司名称、组织信息。
+- <strong>公钥 (Public Key)</strong>：用于加密数据。
+- <strong>有效期</strong>：证书的起止时间（通常 1 年）。
+- <strong>CA 签名</strong>：CA 机构使用其私钥对证书内容的数字签名（防篡改）。</p>
+<h3 id="12-https">1.2 HTTPS 的价值<a class="headerlink" href="#12-https" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>防窃听</strong>：数据全程加密，防止账号密码、信用卡号被盗。</li>
+<li><strong>防篡改</strong>：防止运营商或黑客在网页中插入广告、恶意代码。</li>
+<li><strong>防劫持</strong>：防止流量被重定向到钓鱼网站。</li>
+<li><strong>信任加分</strong>：浏览器显示“安全锁”标志，提升用户信任度；利于 SEO 排名。</li>
+</ol>
+<h2 id="ssl_1">二、SSL 证书类型与选型<a class="headerlink" href="#ssl_1" title="Permanent link">&para;</a></h2>
+<p>根据验证严格程度，SSL 证书分为三类：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">类型</th>
+<th style="text-align: left;">验证内容</th>
+<th style="text-align: left;">颁发速度</th>
+<th style="text-align: left;">浏览器显示</th>
+<th style="text-align: left;">适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>DV (域名型)</strong></td>
+<td style="text-align: left;">仅验证域名所有权</td>
+<td style="text-align: left;">分钟级</td>
+<td style="text-align: left;">安全锁</td>
+<td style="text-align: left;">个人博客、测试环境、中小企业官网</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>OV (企业型)</strong></td>
+<td style="text-align: left;">验证域名 + 企业真实身份</td>
+<td style="text-align: left;">1-3 工作日</td>
+<td style="text-align: left;">安全锁 + 证书详情显示公司名</td>
+<td style="text-align: left;">企业官网、电商平台、政务网站</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>EV (增强型)</strong></td>
+<td style="text-align: left;">极其严格的身份验证</td>
+<td style="text-align: left;">3-7 工作日</td>
+<td style="text-align: left;">安全锁 + <strong>地址栏绿色/显示公司名</strong></td>
+<td style="text-align: left;">银行、证券、大型支付平台</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">三、国密改造与双证书方案<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="31_1">3.1 背景：自主可控<a class="headerlink" href="#31_1" title="Permanent link">&para;</a></h3>
+<p>为了保障国家信息安全，金融、政务等关键领域正在推行<strong>国密算法（SM2/SM3/SM4）</strong>替代国际算法（RSA/ECC）。</p>
+<h3 id="32">3.2 挑战：兼容性<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<p>主流浏览器（Chrome/Edge）默认仅支持国际算法，不支持国密算法。仅国密浏览器（如 360/红莲花）支持国密。</p>
+<h3 id="33-sm2-rsa">3.3 解决方案：SM2 + RSA 双证书自适应<a class="headerlink" href="#33-sm2-rsa" title="Permanent link">&para;</a></h3>
+<p>腾讯云提供<strong>国密自适应网关</strong>方案：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>graph TD
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    User[用户客户端] --&gt; Gateway[国密自适应网关/CLB]
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    Gateway -- 识别浏览器 --&gt; Check{支持国密?}
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    Check -- 是 (国密浏览器) --&gt; SM2[返回 SM2 国密证书]
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    Check -- 否 (通用浏览器) --&gt; RSA[返回 RSA 国际证书]
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    SM2 --&gt; Secure[建立国密 HTTPS 连接]
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    RSA --&gt; Secure
+</code></pre></div>
+<ul>
+<li><strong>服务器端</strong>：同时部署 SM2 国密证书和 RSA 国际证书。</li>
+<li><strong>网关层</strong>：根据客户端 <code>ClientHello</code> 消息中的加密套件（Cipher Suites）自动判断。</li>
+<li><strong>效果</strong>：既满足合规要求（国密访问），又保证全球通用性（国际访问）。</li>
+</ul>
+<hr />
+<h1 id="_5">课程总结<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
+<h2 id="_6">知识体系回顾<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>本课程串联了从域名解析到安全传输的完整链路：</p>
+<ol>
+<li><strong>域名服务</strong>：<ul>
+<li><strong>DNS 解析</strong>：递归 + 迭代查询模型。</li>
+<li><strong>云解析</strong>：智能调度、负载均衡、宕机切换。</li>
+<li><strong>HTTPDNS</strong>：移动端防劫持神器。</li>
+</ul>
+</li>
+<li><strong>数字证书</strong>：<ul>
+<li><strong>HTTPS</strong>：身份认证 + 数据加密 + 完整性校验。</li>
+<li><strong>证书类型</strong>：DV（入门）、OV（企业）、EV（金融）。</li>
+</ul>
+</li>
+<li><strong>国密安全</strong>：<ul>
+<li><strong>SM2 算法</strong>：国家自主可控的公钥密码算法。</li>
+<li><strong>双证书架构</strong>：兼顾合规与兼容的最佳实践。</li>
+</ul>
+</li>
+</ol>
+<h2 id="checklist">架构师实践清单 (Checklist)<a class="headerlink" href="#checklist" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] <strong>域名解析</strong>：生产环境是否配置了多条 A 记录实现负载均衡？是否开启了 TTL 优化？</li>
+<li>[ ] <strong>移动端</strong>：APP 是否集成了 HTTPDNS SDK 以防止域名劫持？</li>
+<li>[ ] <strong>证书管理</strong>：<ul>
+<li>是否开启了证书到期自动监控和续费提醒？</li>
+<li>核心业务是否升级到了 OV 或 EV 证书？</li>
+</ul>
+</li>
+<li>[ ] <strong>安全合规</strong>：政务/金融业务是否实施了国密改造（双证书方案）？</li>
+<li>[ ] <strong>全站 HTTPS</strong>：是否配置了 HTTP 强制跳转 HTTPS（HSTS）？</li>
+</ul>
+<p>本章课程到此结束。下一章，我们将进入云架构的观测与分析领域，讲解 <strong>2.17 腾讯云可观测平台</strong>。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/AngelSnow1129" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

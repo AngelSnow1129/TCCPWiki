@@ -1,0 +1,2077 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="腾讯云架构师认证考试学习资料与知识点整理">
+      
+      
+        <meta name="author" content="AngelSnow">
+      
+      
+        <link rel="canonical" href="https://angelsnow1129.github.io/TCCPWiki/chapter2/2.3_%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1TKE%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">
+      
+      
+        <link rel="prev" href="../2.2_%E5%BC%B9%E6%80%A7%E4%BC%B8%E7%BC%A9AS%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">
+      
+      
+        <link rel="next" href="../2.4_%E7%A7%81%E6%9C%89%E7%BD%91%E7%BB%9C%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>2.3 容器服务 TKE - 腾讯云架构师认证 (TCCP) 学习指南</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#23-tke" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="腾讯云架构师认证 (TCCP) 学习指南" class="md-header__button md-logo" aria-label="腾讯云架构师认证 (TCCP) 学习指南" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            腾讯云架构师认证 (TCCP) 学习指南
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2.3 容器服务 TKE
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/AngelSnow1129/TCCPWiki" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AngelSnow1129/TCCPWiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapter1/1.1_%E4%BA%91%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%AE%BA/" class="md-tabs__link">
+          
+  
+  
+  第一章 云架构设计基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../2.1_%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8CVM%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-tabs__link">
+          
+  
+  
+  第二章 核心产品与服务
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapter3/3.1_%E4%BA%91%E4%B8%8A%E5%AE%B9%E7%81%BE/" class="md-tabs__link">
+          
+  
+  
+  第三章 架构设计实践
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapter4/4.1_%E5%9B%BD%E5%AE%B6%E5%AE%89%E5%85%A8%E7%AD%89%E7%BA%A7%E4%BF%9D%E6%8A%A4/" class="md-tabs__link">
+          
+  
+  
+  第四章 云安全体系
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapter5/5.1_%E8%BF%81%E7%A7%BB%E6%96%B9%E6%B3%95%E8%AE%BA%E6%A6%82%E8%BF%B0/" class="md-tabs__link">
+          
+  
+  
+  第五章 云迁移与成本
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E7%9F%A5%E8%AF%86%E7%82%B9%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  📋 知识点大纲
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="腾讯云架构师认证 (TCCP) 学习指南" class="md-nav__button md-logo" aria-label="腾讯云架构师认证 (TCCP) 学习指南" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    腾讯云架构师认证 (TCCP) 学习指南
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/AngelSnow1129/TCCPWiki" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AngelSnow1129/TCCPWiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章 云架构设计基础
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第一章 云架构设计基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter1/1.1_%E4%BA%91%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1 云架构设计概论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章 核心产品与服务
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第二章 核心产品与服务
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.1_%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8CVM%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.1 云服务器 CVM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.2_%E5%BC%B9%E6%80%A7%E4%BC%B8%E7%BC%A9AS%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.2 弹性伸缩 AS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.3 容器服务 TKE
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.3 容器服务 TKE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        课程简介
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="课程简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        学习目标
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.4_%E7%A7%81%E6%9C%89%E7%BD%91%E7%BB%9C%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.4 私有网络 VPC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.5_%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.5 负载均衡 CLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.6_%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91%E7%BD%91%E7%BB%9C%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.6 内容分发 CDN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.7_%E4%BA%91%E5%AD%98%E5%82%A8%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.7 云存储
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.8_%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1CLS%E4%BB%8B%E7%BB%8D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.8 日志服务 CLS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.9_%E4%BA%91%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.9 云数据库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.10_%E4%BC%81%E4%B8%9A%E7%BA%A7%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93TDSQL%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.10 TDSQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.11_%E4%BA%91%E5%8E%9F%E7%94%9FTDSQL-C%2B%E4%BA%91%E6%95%B0%E6%8D%AE%E5%BA%93Redis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.11 TDSQL-C & Redis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.12_%E4%BA%91Redis%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%2B%E5%85%B6%E4%BB%96NoSQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.12 Redis 最佳实践
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.13_%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.13 消息队列 TDMQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.14_%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A6%82%E8%BF%B0%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.14 微服务
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.15_Serverless%E4%BA%91%E5%87%BD%E6%95%B0%E6%A6%82%E8%BF%B0%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.15 Serverless SCF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.16_%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%2B%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6%E6%9C%8D%E5%8A%A1%2BSSL%E8%AF%81%E4%B9%A6%E6%9C%8D%E5%8A%A1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.16 域名与证书
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.17_%E8%85%BE%E8%AE%AF%E4%BA%91%E5%8F%AF%E8%A7%82%E6%B5%8B%E5%B9%B3%E5%8F%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.17 可观测平台
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章 架构设计实践
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第三章 架构设计实践
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter3/3.1_%E4%BA%91%E4%B8%8A%E5%AE%B9%E7%81%BE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.1 云上容灾
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter3/3.2_%E4%BA%91%E4%B8%8A%E6%9E%B6%E6%9E%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.2 性能优化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter3/3.3_%E5%BA%94%E7%94%A8%E5%AE%B9%E5%99%A8%E5%8C%96%E6%94%B9%E9%80%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.3 容器化改造
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter3/3.4_AI%E5%92%8C%E5%A4%A7%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.4 AI 与大模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章 云安全体系
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第四章 云安全体系
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter4/4.1_%E5%9B%BD%E5%AE%B6%E5%AE%89%E5%85%A8%E7%AD%89%E7%BA%A7%E4%BF%9D%E6%8A%A4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.1 等级保护
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter4/4.2_%E4%BA%91%E5%AE%89%E5%85%A8%E4%BD%93%E7%B3%BB%E4%B8%8E%E6%A0%87%E5%87%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.2 安全体系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter4/4.3_%E6%9E%84%E5%BB%BA%E5%AE%89%E5%85%A8%E9%80%9A%E4%BF%A1%E7%BD%91%E7%BB%9C%E5%8F%8A%E5%AE%89%E5%85%A8%E5%8C%BA%E5%9F%9F%E8%BE%B9%E7%95%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.3 网络边界安全
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter4/4.4_%E6%9E%84%E5%BB%BA%E5%AE%89%E5%85%A8%E8%AE%A1%E7%AE%97%E7%8E%AF%E5%A2%83%E5%8F%8A%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E4%B8%AD%E5%BF%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.4 计算环境安全
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章 云迁移与成本
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第五章 云迁移与成本
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter5/5.1_%E8%BF%81%E7%A7%BB%E6%96%B9%E6%B3%95%E8%AE%BA%E6%A6%82%E8%BF%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.1 迁移方法论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter5/5.2_%E4%BA%91%E7%BB%84%E4%BB%B6%E4%B8%8E%E8%BF%81%E7%A7%BB%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.2 迁移工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter5/5.3_%E8%BF%81%E7%A7%BB%E6%A1%88%E4%BE%8B%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%BA%91%E4%B8%8A%E8%B5%84%E6%BA%90%E6%88%90%E6%9C%AC%E7%AE%A1%E7%90%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.3 成本管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%9F%A5%E8%AF%86%E7%82%B9%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 知识点大纲
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        课程简介
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="课程简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        学习目标
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="23-tke">2.3 容器服务 TKE 及最佳实践<a class="headerlink" href="#23-tke" title="Permanent link">&para;</a></h1>
+<h2 id="_1">课程简介<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>容器服务（Tencent Kubernetes Engine，TKE）是腾讯云基于原生 Kubernetes 提供的高性能、高可扩展的容器管理服务。本课程将从 TKE 的产品定义、架构原理出发，深入剖析集群设计、网络选型、节点管理及 DevOps 持续交付等核心环节的最佳实践，帮助您构建生产级的高可用容器集群。</p>
+<h3 id="_2">学习目标<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>通过本课程的学习，您将能够：</p>
+<ul>
+<li>✓ <strong>理解 TKE 架构</strong>：掌握 TKE 的产品定义、底层架构及核心优势。</li>
+<li>✓ <strong>掌握集群设计</strong>：学会选择合适的集群类型、运行时（Containerd/Docker）及 Service 转发模式。</li>
+<li>✓ <strong>精通网络选型</strong>：深入理解 Global Router、VPC-CNI 和 Cilium Overlay 三种网络模式的区别与应用场景。</li>
+<li>✓ <strong>实施弹性伸缩</strong>：掌握 TKE 集群自动伸缩（CA）的策略配置与多可用区容灾方案。</li>
+<li>✓ <strong>落地 DevOps</strong>：了解如何结合 TCR 和 Coding 实现容器化的持续交付。</li>
+</ul>
+<hr />
+<h1 id="tke">第一部分：容器服务 TKE 基础<a class="headerlink" href="#tke" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>本部分导读</strong><br />
+了解 TKE 是如何基于腾讯云 IaaS 和 PaaS 层构建的，以及它为何能成为企业云原生的首选平台。</p>
+</blockquote>
+<h2 id="tke_1">一、TKE 产品概述<a class="headerlink" href="#tke_1" title="Permanent link">&para;</a></h2>
+<h3 id="11">1.1 产品定义<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p>腾讯云容器服务（TKE）是一种高度可扩展的高性能容器管理服务。它允许用户在托管的云服务器实例集群上轻松运行应用程序。
+- <strong>无需运维控制平面</strong>：TKE 托管了 Kubernetes Master 节点，用户无需安装、运维或扩展集群管理基础设施。
+- <strong>标准化 API</strong>：通过简单的 API 调用即可启动、停止 Docker 应用程序，查询集群状态。
+- <strong>灵活调度</strong>：根据资源需求和可用性要求，智能安排容器在集群中的置放。</p>
+<h3 id="12">1.2 产品架构<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<p>TKE 基于腾讯云强大的 IaaS 和 PaaS 能力构建，向上提供标准的 K8S 服务。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>graph TD
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    User[用户/运维人员] --&gt; API[控制台 / API / Kubectl]
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    subgraph TKE 容器服务
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        direction TB
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        Feature1[集群管理&lt;br&gt;(托管/独立/升级)]
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        Feature2[应用管理&lt;br&gt;(Helm Chart/镜像)]
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        Feature3[容器网络&lt;br&gt;(VPC-CNI/Global Router)]
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        Feature4[运维管理&lt;br&gt;(监控/日志/告警)]
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    end
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    API --&gt; TKE
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    subgraph 基础设施层 (IaaS &amp; PaaS)
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        IaaS[计算: CVM/EKS&lt;br&gt;网络: VPC/CLB/NAT&lt;br&gt;存储: CBS/CFS/COS]
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        PaaS[数据库: TDSQL/Redis&lt;br&gt;中间件: TSF/CKafka]
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    end
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    TKE --&gt; IaaS
+</code></pre></div>
+<ul>
+<li><strong>底层 IaaS 支持</strong>：CVM（计算）、CLB（负载均衡）、VPC（网络）、CBS/CFS/COS（存储）。</li>
+<li><strong>核心功能模块</strong>：<ul>
+<li><strong>集群管理</strong>：支持集群托管、独立部署、自定义 OS、平滑升级。</li>
+<li><strong>网络方案</strong>：提供 Global Router、VPC-CNI、Cilium Overlay 等多种模式。</li>
+<li><strong>应用管理</strong>：支持 Helm Chart 和 TCR 镜像仓库集成。</li>
+<li><strong>运维监控</strong>：集成云监控、日志服务 CLS 和事件告警。</li>
+</ul>
+</li>
+</ul>
+<h3 id="13">1.3 核心优势<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>原生兼容</strong>：完全兼容原生 K8S API，无缝对接社区生态。</li>
+<li><strong>简单易用</strong>：简化 Master 节点管理，用户仅需聚焦容器应用开发。</li>
+<li><strong>深度集成</strong>：与 CVM、CBS、CLB、VPC 等腾讯云基础设施深度融合。</li>
+<li><strong>安全可靠</strong>：提供多层次安全防护，通过 VPC 实现网络隔离。</li>
+</ol>
+<hr />
+<h1 id="tke_2">第二部分：TKE 集群设计与选型最佳实践<a class="headerlink" href="#tke_2" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>本部分导读</strong><br />
+一个稳定的容器平台始于正确的架构设计。本节重点讲解在创建集群时需要做出的关键决策。</p>
+</blockquote>
+<h2 id="_3">一、集群与管理模式选型<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="11-vs">1.1 管理模式：托管 vs 独立<a class="headerlink" href="#11-vs" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">模式</th>
+<th style="text-align: left;">说明</th>
+<th style="text-align: left;">适用场景</th>
+<th style="text-align: left;">费用与 SLA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>托管集群 (Managed)</strong></td>
+<td style="text-align: left;">腾讯云代维 Master 节点和 Etcd，Master 资源随规模自动扩容。</td>
+<td style="text-align: left;"><strong>首选推荐</strong>。关注业务应用，不希望运维 K8S 控制平面。</td>
+<td style="text-align: left;">Master 节点免费（或收管理费），提供 SLA 保障。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>独立集群 (Standard)</strong></td>
+<td style="text-align: left;">用户自购 CVM 作为 Master，完全掌控参数配置。</td>
+<td style="text-align: left;">需要深度自定义 Master 参数（如修改 API Server 启动参数）的特殊场景。</td>
+<td style="text-align: left;">需支付 Master 机器费用，不提供控制平面 SLA。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Serverless 集群</strong></td>
+<td style="text-align: left;">无需管理任何节点，Pod 直接运行在腾讯云资源池中。</td>
+<td style="text-align: left;">突发业务、离线计算、在线推理，不想管理服务器。</td>
+<td style="text-align: left;">按 Pod 资源使用量计费。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-runtime">1.2 运行时 (Runtime) 选型<a class="headerlink" href="#12-runtime" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Containerd (推荐)</strong>：更轻量级、更高性能，调用链更短，是 K8S 社区推荐的默认运行时。</li>
+<li><strong>Docker</strong>：成熟度高，但由于 K8S 移除了 Docker Shim，会带来额外的开销。仅建议在极度依赖 Docker in Docker 或特定遗留场景下使用。</li>
+</ul>
+<h3 id="13_1">1.3 操作系统选型<a class="headerlink" href="#13_1" title="Permanent link">&para;</a></h3>
+<p><strong>推荐：Tencent Linux (TLinux)</strong>
+- <strong>内核优化</strong>：腾讯云团队维护，针对容器场景优化了内核，解决了常见的 <code>kmem account leakage</code> (内存泄漏) 和 <code>soft lockup</code> 等问题。
+- <strong>兼容性</strong>：在腾讯内部及大规模生产环境中经过验证，兼容性最好。
+- <strong>其他选项</strong>：CentOS（已停止维护，不推荐）、Ubuntu（互联网行业常用，兼容性较好）。</p>
+<h2 id="service">二、Service 转发模式选型<a class="headerlink" href="#service" title="Permanent link">&para;</a></h2>
+<p>K8S Service 负责集群内的服务发现和负载均衡，TKE 提供两种模式：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">模式</th>
+<th style="text-align: left;">原理</th>
+<th style="text-align: left;">优点</th>
+<th style="text-align: left;">缺点</th>
+<th style="text-align: left;">适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>IPVS (推荐)</strong></td>
+<td style="text-align: left;">基于内核 LVS 实现四层负载均衡。</td>
+<td style="text-align: left;"><strong>高性能</strong>，支持复杂的负载均衡算法（最小连接、加权等），大规模集群规则刷新快。</td>
+<td style="text-align: left;">排查问题需要熟悉 LVS 命令。</td>
+<td style="text-align: left;"><strong>生产环境首选</strong>，特别是大规模集群 (&gt;1000 Service)。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>IPTables</strong></td>
+<td style="text-align: left;">基于 Linux Netfilter 规则。</td>
+<td style="text-align: left;">稳定性极高，规则简单直观。</td>
+<td style="text-align: left;">规则线性匹配，Service 数量多时性能下降严重。</td>
+<td style="text-align: left;">小规模集群，或对稳定性有极致要求的场景。</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="_4">第三部分：容器网络插件选型 (关键)<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>本部分导读</strong><br />
+网络模式决定了容器的性能和互通性，一旦选定后期更改极为困难，请务必根据业务场景慎重选择。</p>
+</blockquote>
+<p>TKE 提供三种主要网络插件：</p>
+<h3 id="31-global-router">3.1 Global Router 模式 (网桥/路由模式)<a class="headerlink" href="#31-global-router" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>原理</strong>：容器网段独立于 VPC，通过 Docker Bridge (cbr0) 连接。跨主机通信依赖 VPC 路由表。</li>
+<li><strong>特点</strong>：<ul>
+<li>容器 IP 不占用 VPC 的 IP 资源。</li>
+<li>性能略有损耗（经过两次 Bridge）。</li>
+<li><strong>不支持</strong>容器固定 IP。</li>
+</ul>
+</li>
+<li><strong>适用场景</strong>：对网络性能要求不高、VPC IP 资源紧缺的普通业务场景。</li>
+</ul>
+<h3 id="32-vpc-cni">3.2 VPC-CNI 模式 (弹性网卡直通) —— <strong>推荐</strong><a class="headerlink" href="#32-vpc-cni" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>原理</strong>：容器直接使用 VPC 的子网 IP（弹性网卡 ENI 或辅助 IP）。</li>
+<li><strong>特点</strong>：<ul>
+<li><strong>高性能</strong>：容器与 CVM 处于同一网络平面，无网桥损耗（性能提升约 10%）。</li>
+<li><strong>支持固定 IP</strong>：Pod 重启后 IP 不变（适合传统架构迁移）。</li>
+<li><strong>支持直通 POD</strong>：CLB 直接绑定 Pod IP，流量不经过 NodePort 转发。</li>
+</ul>
+</li>
+<li><strong>限制</strong>：消耗 VPC IP 资源，受限于节点可绑定的弹性网卡数量。</li>
+<li><strong>适用场景</strong>：对网络时延敏感、高并发、需要固定 IP 或 CLB 直通的场景（如游戏、核心微服务）。</li>
+</ul>
+<h3 id="33-cilium-overlay">3.3 Cilium Overlay 模式<a class="headerlink" href="#33-cilium-overlay" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>原理</strong>：基于 eBPF 和 VXLAN 隧道封装。</li>
+<li><strong>特点</strong>：<ul>
+<li>云上节点和第三方节点（混合云）可共享容器网段。</li>
+<li>解耦底层网络，容器 IP 独立。</li>
+<li>存在约 10% 的封装性能损耗。</li>
+</ul>
+</li>
+<li><strong>适用场景</strong>：混合云、分布式云架构，需要跨云统一网络管理的场景。</li>
+</ul>
+<p><strong>选型总结表：</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">需求</th>
+<th style="text-align: left;">推荐模式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">追求极致性能</td>
+<td style="text-align: left;"><strong>VPC-CNI</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">需要 Pod 固定 IP</td>
+<td style="text-align: left;"><strong>VPC-CNI</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">VPC IP 资源极其有限</td>
+<td style="text-align: left;"><strong>Global Router</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">混合云/跨环境互通</td>
+<td style="text-align: left;"><strong>Cilium Overlay</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="_5">第四部分：节点管理与弹性伸缩<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
+<h2 id="_6">一、节点类型选型<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>原生节点 (Native Node)</strong>：基于 CVM 创建，最通用的类型。</li>
+<li><strong>超级节点 (Super Node)</strong>：通常指基于 EKS 的虚拟节点，无服务器维护，适合突发流量。</li>
+<li><strong>注册节点</strong>：将用户 IDC 的物理机或虚拟机注册到 TKE，实现混合云管理。</li>
+</ol>
+<h2 id="cluster-autoscaler-ca">二、集群弹性伸缩 (Cluster Autoscaler, CA)<a class="headerlink" href="#cluster-autoscaler-ca" title="Permanent link">&para;</a></h2>
+<p>TKE 支持根据 CPU、内存等指标自动增加或减少节点数量。</p>
+<h3 id="21">2.1 最佳实践原则<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>基于 Request 扩容</strong>：CA 的触发条件是“集群中有 Pod 因为资源不足处于 Pending 状态”。因此，务必为工作负载（Workload）配置合理的 <code>Request</code> 值。</li>
+<li><strong>多伸缩组配置</strong>：<ul>
+<li>建议配置多个伸缩组，分布在不同的<strong>可用区 (AZ)</strong>，以实现容灾。</li>
+<li><strong>混合机型</strong>：在伸缩组中配置多种同规格机型，防止某种机型售罄导致扩容失败。</li>
+</ul>
+</li>
+<li><strong>成本优化</strong>：<ul>
+<li>可以创建包含<strong>竞价实例 (Spot Instance)</strong> 的伸缩组，用于运行无状态、可中断的离线计算任务，大幅降低成本。</li>
+</ul>
+</li>
+<li><strong>节点池管理</strong>：使用“节点池”功能对不同配置的节点进行分组管理（如 AI 节点池、Web 节点池），便于定向调度和独立扩缩容。</li>
+</ul>
+<hr />
+<h1 id="tke-devops">第五部分：TKE 结合 DevOps 持续交付<a class="headerlink" href="#tke-devops" title="Permanent link">&para;</a></h1>
+<p>容器技术是实现 DevOps 的基石。TKE 可以与腾讯云生态工具无缝结合，实现 CI/CD。</p>
+<h3 id="51">5.1 核心组件<a class="headerlink" href="#51" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>TCR (Tencent Container Registry)</strong>：企业级容器镜像仓库，提供镜像扫描、全球同步等功能。</li>
+<li><strong>Coding / 蓝盾</strong>：提供代码托管和 CI/CD 流水线服务。</li>
+</ul>
+<h3 id="52">5.2 自动化流水线场景<a class="headerlink" href="#52" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>推送代码触发</strong>：<ul>
+<li>开发人员提交代码到 Git 仓库。</li>
+<li>触发 Coding 流水线：编译代码 -&gt; 构建 Docker 镜像 -&gt; 推送到 TCR。</li>
+<li>触发 TKE 部署：自动更新 Deployment 的镜像版本，完成滚动更新。</li>
+</ul>
+</li>
+<li><strong>镜像推送触发</strong>：<ul>
+<li>本地构建镜像并推送到 TCR。</li>
+<li>TCR Webhook 触发 TKE 集群的应用更新。</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h1 id="_7">课程总结<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h1>
+<p>本课程详细介绍了容器服务 TKE 的全貌。在实际生产落地中，建议遵循以下黄金法则：</p>
+<ol>
+<li><strong>集群</strong>：优先选择<strong>托管集群</strong>，Master 节点交给腾讯云运维。</li>
+<li><strong>OS</strong>：优先选择 <strong>Tencent Linux</strong>，获得最佳内核支持。</li>
+<li><strong>网络</strong>：性能敏感型业务首选 <strong>VPC-CNI</strong> 模式；IP 紧缺场景选择 Global Router。</li>
+<li><strong>代理</strong>：Service 转发模式首选 <strong>IPVS</strong>。</li>
+<li><strong>伸缩</strong>：合理配置 Request 值，利用<strong>多可用区</strong>和<strong>竞价实例</strong>伸缩组平衡高可用与成本。</li>
+</ol>
+<p>通过合理的架构设计和配置，TKE 将成为您业务高效、稳定运行的坚实底座。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/AngelSnow1129" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

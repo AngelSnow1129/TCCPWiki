@@ -1,0 +1,3402 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="腾讯云架构师认证考试学习资料与知识点整理">
+      
+      
+        <meta name="author" content="AngelSnow">
+      
+      
+        <link rel="canonical" href="https://angelsnow1129.github.io/TCCPWiki/%E7%9F%A5%E8%AF%86%E7%82%B9%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/">
+      
+      
+        <link rel="prev" href="../chapter5/5.3_%E8%BF%81%E7%A7%BB%E6%A1%88%E4%BE%8B%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%BA%91%E4%B8%8A%E8%B5%84%E6%BA%90%E6%88%90%E6%9C%AC%E7%AE%A1%E7%90%86/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>📋 知识点大纲 - 腾讯云架构师认证 (TCCP) 学习指南</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#-" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="腾讯云架构师认证 (TCCP) 学习指南" class="md-header__button md-logo" aria-label="腾讯云架构师认证 (TCCP) 学习指南" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            腾讯云架构师认证 (TCCP) 学习指南
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📋 知识点大纲
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/AngelSnow1129/TCCPWiki" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AngelSnow1129/TCCPWiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter1/1.1_%E4%BA%91%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%AE%BA/" class="md-tabs__link">
+          
+  
+  
+  第一章 云架构设计基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter2/2.1_%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8CVM%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-tabs__link">
+          
+  
+  
+  第二章 核心产品与服务
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter3/3.1_%E4%BA%91%E4%B8%8A%E5%AE%B9%E7%81%BE/" class="md-tabs__link">
+          
+  
+  
+  第三章 架构设计实践
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter4/4.1_%E5%9B%BD%E5%AE%B6%E5%AE%89%E5%85%A8%E7%AD%89%E7%BA%A7%E4%BF%9D%E6%8A%A4/" class="md-tabs__link">
+          
+  
+  
+  第四章 云安全体系
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter5/5.1_%E8%BF%81%E7%A7%BB%E6%96%B9%E6%B3%95%E8%AE%BA%E6%A6%82%E8%BF%B0/" class="md-tabs__link">
+          
+  
+  
+  第五章 云迁移与成本
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  📋 知识点大纲
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="腾讯云架构师认证 (TCCP) 学习指南" class="md-nav__button md-logo" aria-label="腾讯云架构师认证 (TCCP) 学习指南" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    腾讯云架构师认证 (TCCP) 学习指南
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/AngelSnow1129/TCCPWiki" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AngelSnow1129/TCCPWiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章 云架构设计基础
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第一章 云架构设计基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter1/1.1_%E4%BA%91%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1 云架构设计概论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章 核心产品与服务
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第二章 核心产品与服务
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter2/2.1_%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8CVM%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.1 云服务器 CVM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter2/2.2_%E5%BC%B9%E6%80%A7%E4%BC%B8%E7%BC%A9AS%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.2 弹性伸缩 AS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter2/2.3_%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1TKE%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.3 容器服务 TKE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter2/2.4_%E7%A7%81%E6%9C%89%E7%BD%91%E7%BB%9C%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.4 私有网络 VPC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter2/2.5_%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.5 负载均衡 CLB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter2/2.6_%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91%E7%BD%91%E7%BB%9C%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.6 内容分发 CDN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter2/2.7_%E4%BA%91%E5%AD%98%E5%82%A8%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.7 云存储
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter2/2.8_%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1CLS%E4%BB%8B%E7%BB%8D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.8 日志服务 CLS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter2/2.9_%E4%BA%91%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.9 云数据库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter2/2.10_%E4%BC%81%E4%B8%9A%E7%BA%A7%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93TDSQL%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.10 TDSQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter2/2.11_%E4%BA%91%E5%8E%9F%E7%94%9FTDSQL-C%2B%E4%BA%91%E6%95%B0%E6%8D%AE%E5%BA%93Redis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.11 TDSQL-C & Redis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter2/2.12_%E4%BA%91Redis%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%2B%E5%85%B6%E4%BB%96NoSQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.12 Redis 最佳实践
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter2/2.13_%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.13 消息队列 TDMQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter2/2.14_%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A6%82%E8%BF%B0%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.14 微服务
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter2/2.15_Serverless%E4%BA%91%E5%87%BD%E6%95%B0%E6%A6%82%E8%BF%B0%E5%8F%8A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.15 Serverless SCF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter2/2.16_%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%2B%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6%E6%9C%8D%E5%8A%A1%2BSSL%E8%AF%81%E4%B9%A6%E6%9C%8D%E5%8A%A1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.16 域名与证书
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter2/2.17_%E8%85%BE%E8%AE%AF%E4%BA%91%E5%8F%AF%E8%A7%82%E6%B5%8B%E5%B9%B3%E5%8F%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.17 可观测平台
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章 架构设计实践
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第三章 架构设计实践
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter3/3.1_%E4%BA%91%E4%B8%8A%E5%AE%B9%E7%81%BE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.1 云上容灾
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter3/3.2_%E4%BA%91%E4%B8%8A%E6%9E%B6%E6%9E%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.2 性能优化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter3/3.3_%E5%BA%94%E7%94%A8%E5%AE%B9%E5%99%A8%E5%8C%96%E6%94%B9%E9%80%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.3 容器化改造
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter3/3.4_AI%E5%92%8C%E5%A4%A7%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.4 AI 与大模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章 云安全体系
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第四章 云安全体系
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter4/4.1_%E5%9B%BD%E5%AE%B6%E5%AE%89%E5%85%A8%E7%AD%89%E7%BA%A7%E4%BF%9D%E6%8A%A4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.1 等级保护
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter4/4.2_%E4%BA%91%E5%AE%89%E5%85%A8%E4%BD%93%E7%B3%BB%E4%B8%8E%E6%A0%87%E5%87%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.2 安全体系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter4/4.3_%E6%9E%84%E5%BB%BA%E5%AE%89%E5%85%A8%E9%80%9A%E4%BF%A1%E7%BD%91%E7%BB%9C%E5%8F%8A%E5%AE%89%E5%85%A8%E5%8C%BA%E5%9F%9F%E8%BE%B9%E7%95%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.3 网络边界安全
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter4/4.4_%E6%9E%84%E5%BB%BA%E5%AE%89%E5%85%A8%E8%AE%A1%E7%AE%97%E7%8E%AF%E5%A2%83%E5%8F%8A%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E4%B8%AD%E5%BF%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.4 计算环境安全
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章 云迁移与成本
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第五章 云迁移与成本
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter5/5.1_%E8%BF%81%E7%A7%BB%E6%96%B9%E6%B3%95%E8%AE%BA%E6%A6%82%E8%BF%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.1 迁移方法论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter5/5.2_%E4%BA%91%E7%BB%84%E4%BB%B6%E4%B8%8E%E8%BF%81%E7%A7%BB%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.2 迁移工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter5/5.3_%E8%BF%81%E7%A7%BB%E6%A1%88%E4%BE%8B%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%BA%91%E4%B8%8A%E8%B5%84%E6%BA%90%E6%88%90%E6%9C%AC%E7%AE%A1%E7%90%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.3 成本管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 知识点大纲
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 知识点大纲
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        目录结构
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        目录结构
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="-">腾讯云架构师认证 - 知识点复习大纲<a class="headerlink" href="#-" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>文档说明</strong><br />
+本文档基于腾讯云架构师认证课程的全部章节内容，提炼核心知识点，构建完整的知识体系框架，并对重点内容进行深度扩充。适用于考前复习、知识巩固及实战参考。</p>
+</blockquote>
+<hr />
+<h2 id="_1">目录结构<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#第一章云架构设计基础">第一章：云架构设计基础</a></li>
+<li><a href="#第二章腾讯云核心产品与服务">第二章：腾讯云核心产品与服务</a></li>
+<li><a href="#第三章云架构设计实践">第三章：云架构设计实践</a></li>
+<li><a href="#第四章云安全体系">第四章：云安全体系</a></li>
+<li><a href="#第五章云迁移与成本管理">第五章：云迁移与成本管理</a></li>
+<li><a href="#核心考点速记">核心考点速记</a></li>
+</ul>
+<hr />
+<h1 id="_2">第一章：云架构设计基础<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<h2 id="11">1.1 云计算核心概念<a class="headerlink" href="#11" title="Permanent link">&para;</a></h2>
+<h3 id="_3">关键知识点<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>云计算定义（NIST标准）</strong></li>
+<li>按需自助服务</li>
+<li>广泛的网络访问</li>
+<li>资源池化</li>
+<li>快速弹性</li>
+<li>
+<p>可计量服务</p>
+</li>
+<li>
+<p><strong>云服务模型（三层架构）</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>SaaS (软件即服务) - 腾讯会议、企业微信
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>↓
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>PaaS (平台即服务) - TKE、SCF、TDSQL
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>↓
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>IaaS (基础设施即服务) - CVM、CBS、VPC
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>云部署模型</strong></p>
+</li>
+<li><strong>公有云</strong>：成本低、弹性强、适合互联网业务</li>
+<li><strong>私有云</strong>：数据自主、安全性高、适合金融政务</li>
+<li><strong>专有云</strong>：公有云技术+私有云合规</li>
+<li><strong>混合云</strong>：灵活性与安全性平衡</li>
+</ol>
+<h3 id="_4">重点扩充：云计算八大特征<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>技术实现</th>
+<th>业务价值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>超大规模</strong></td>
+<td>百万级服务器集群</td>
+<td>支撑海量并发，无容量上限</td>
+</tr>
+<tr>
+<td><strong>虚拟化</strong></td>
+<td>KVM/Docker容器技术</td>
+<td>资源逻辑隔离，提升利用率</td>
+</tr>
+<tr>
+<td><strong>高可靠性</strong></td>
+<td>三副本/纠删码</td>
+<td>数据可靠性99.9999999%</td>
+</tr>
+<tr>
+<td><strong>高可用性</strong></td>
+<td>多AZ部署、自动故障迁移</td>
+<td>服务可用性99.95%+</td>
+</tr>
+<tr>
+<td><strong>通用性</strong></td>
+<td>标准化API</td>
+<td>支撑全行业场景</td>
+</tr>
+<tr>
+<td><strong>弹性扩展</strong></td>
+<td>自动伸缩AS</td>
+<td>应对流量波动，降本增效</td>
+</tr>
+<tr>
+<td><strong>按需服务</strong></td>
+<td>自助式控制台</td>
+<td>分钟级资源交付</td>
+</tr>
+<tr>
+<td><strong>极其廉价</strong></td>
+<td>规模效应</td>
+<td>TCO降低30%-70%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="12">1.2 信创与国产化<a class="headerlink" href="#12" title="Permanent link">&para;</a></h2>
+<h3 id="_5">核心要点<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>战略目标</strong>：实现核心技术自主可控</li>
+<li><strong>2+8+N体系</strong>：党政(2) → 八大行业(8) → 全行业(N)</li>
+<li><strong>四梁八柱</strong>：</li>
+<li>基础硬件：鲲鹏、飞腾、海光、龙芯</li>
+<li>基础软件：麒麟、统信、OpenCloudOS、TDSQL</li>
+<li>云平台：腾讯专有云TCE、TStack</li>
+<li>应用软件：企业微信、腾讯会议、WPS</li>
+</ul>
+<h3 id="_6">腾讯云信创能力矩阵<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>芯片适配：鲲鹏/飞腾/海光/龙芯 → 一云多芯
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>操作系统：TencentOS Server → 内核优化
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>数据库：TDSQL → 金融级分布式
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>中间件：TSF/TDMQ → 微服务治理
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>办公：企业微信/腾讯会议 → 私有化部署
+</code></pre></div>
+<h2 id="13">1.3 云架构设计六大原则<a class="headerlink" href="#13" title="Permanent link">&para;</a></h2>
+<h3 id="_7">原则一：合理部署<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>多可用区（Multi-AZ）</strong>：防范机房级故障</li>
+<li><strong>就近接入</strong>：降低网络延迟</li>
+<li><strong>资源隔离</strong>：VPC子网划分，安全组管控</li>
+</ul>
+<h3 id="_8">原则二：业务持续<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>消除单点</strong>：所有组件集群化/主备化</li>
+<li><strong>容灾标准</strong>：</li>
+<li>同城双活：RPO=0</li>
+<li>两地三中心：防地域级灾难</li>
+<li><strong>数据备份</strong>：快照+异地复制</li>
+</ul>
+<h3 id="_9">原则三：弹性扩展<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>横向扩展（Scale Out）</strong>：增加机器数量</li>
+<li><strong>自动化</strong>：基于CPU/QPS触发AS</li>
+<li><strong>无状态设计</strong>：Session外置到Redis</li>
+</ul>
+<h3 id="_10">原则四：性能效率<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>缓存优先</strong>：CDN+Redis多级缓存</li>
+<li><strong>读写分离</strong>：主从架构，提升吞吐</li>
+<li><strong>异步解耦</strong>：MQ削峰填谷</li>
+</ul>
+<h3 id="_11">原则五：安全合规<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>纵深防御</strong>：边缘→网络→主机→数据</li>
+<li><strong>最小权限</strong>：CAM精细化授权</li>
+<li><strong>等保合规</strong>：满足国家标准</li>
+</ul>
+<h3 id="_12">原则六：成本优化<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>混合计费</strong>：包年包月+按量+竞价</li>
+<li><strong>资源休眠</strong>：非生产环境定时开关机</li>
+<li><strong>监控告警</strong>：及时发现异常</li>
+</ul>
+<hr />
+<h1 id="_13">第二章：腾讯云核心产品与服务<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h1>
+<h2 id="21">2.1 计算服务<a class="headerlink" href="#21" title="Permanent link">&para;</a></h2>
+<h3 id="cvm">CVM（云服务器）核心知识<a class="headerlink" href="#cvm" title="Permanent link">&para;</a></h3>
+<h4 id="_14">实例规格选型<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>标准型(S)：1:2/1:4 → Web服务器、中小型数据库
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>计算型(C)：1:2 → 批处理、游戏服务器
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>内存型(M)：1:8 → Redis、高性能数据库
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>高IO型(IT)：本地NVMe SSD → NoSQL
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>GPU型(GN)：NVIDIA显卡 → AI训练/推理
+</code></pre></div>
+<h4 id="_15">计费模式对比<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>价格</th>
+<th>灵活性</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>包年包月</td>
+<td>⭐</td>
+<td>⭐⭐</td>
+<td>核心业务、长期稳定</td>
+</tr>
+<tr>
+<td>按量计费</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>突发流量、临时测试</td>
+</tr>
+<tr>
+<td>竞价实例</td>
+<td>⭐(1折)</td>
+<td>⭐</td>
+<td>离线计算、可中断任务</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_16">高可用架构<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>┌─────────────────────────────────────┐
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>│              用户请求                │
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>└─────────────┬───────────────────────┘
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>              ↓
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>┌─────────────────────────────────────┐
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>│         CLB (负载均衡)               │
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>└─────────────┬───────────────────────┘
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>              ↓
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    ┌─────────┴─────────┐
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    ↓                   ↓
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>┌─────────┐       ┌─────────┐
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>│可用区A  │       │可用区B  │
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>│CVM实例1 │       │CVM实例2 │
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>└────┬────┘       └────┬────┘
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>     └────────┬────────┘
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>              ↓
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>┌─────────────────────────────────────┐
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>│         共享数据层                   │
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>│    CDB主从 + Redis集群              │
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>└─────────────────────────────────────┘
+</code></pre></div>
+<h3 id="as">弹性伸缩（AS）<a class="headerlink" href="#as" title="Permanent link">&para;</a></h3>
+<h4 id="_17">核心组件<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>启动配置</strong>：定义机型、镜像、安全组</li>
+<li><strong>伸缩组</strong>：定义最小/最大/期望实例数</li>
+<li><strong>伸缩策略</strong>：定时/告警/手动触发</li>
+</ul>
+<h4 id="_18">无状态设计要求<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>传统方式</th>
+<th>云原生改造</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>会话状态</td>
+<td>本地内存</td>
+<td>Redis集群</td>
+</tr>
+<tr>
+<td>结构化数据</td>
+<td>本地SQLite</td>
+<td>云数据库CDB</td>
+</tr>
+<tr>
+<td>文件存储</td>
+<td>本地磁盘</td>
+<td>对象存储COS</td>
+</tr>
+<tr>
+<td>日志</td>
+<td>/var/log</td>
+<td>日志服务CLS</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tke">容器服务（TKE）<a class="headerlink" href="#tke" title="Permanent link">&para;</a></h3>
+<h4 id="_19">集群类型选择<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>托管集群</strong>：Master免费，腾讯云代维（推荐）</li>
+<li><strong>独立集群</strong>：完全自主控制</li>
+<li><strong>Serverless集群</strong>：无需管理节点</li>
+</ul>
+<h4 id="_20">网络模式对比（重点）<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>原理</th>
+<th>性能</th>
+<th>IP消耗</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Global Router</strong></td>
+<td>独立容器网段+路由表</td>
+<td>中</td>
+<td>低</td>
+<td>普通业务</td>
+</tr>
+<tr>
+<td><strong>VPC-CNI</strong></td>
+<td>容器直接使用VPC IP</td>
+<td><strong>高</strong></td>
+<td>高</td>
+<td>高性能、固定IP需求</td>
+</tr>
+<tr>
+<td><strong>Cilium Overlay</strong></td>
+<td>eBPF+VXLAN封装</td>
+<td>中</td>
+<td>低</td>
+<td>混合云场景</td>
+</tr>
+</tbody>
+</table>
+<h4 id="service">Service转发模式<a class="headerlink" href="#service" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>IPVS</strong>：高性能，支持复杂算法（推荐生产）</li>
+<li><strong>IPTables</strong>：稳定性高，小规模集群</li>
+</ul>
+<h2 id="22">2.2 网络服务<a class="headerlink" href="#22" title="Permanent link">&para;</a></h2>
+<h3 id="vpc">VPC（私有网络）<a class="headerlink" href="#vpc" title="Permanent link">&para;</a></h3>
+<h4 id="_21">核心组件<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>VPC (10.0.0.0/16)
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>├── 子网A (10.0.1.0/24) - 可用区1
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>├── 子网B (10.0.2.0/24) - 可用区2
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>├── 路由表 (流量导向规则)
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>├── 安全组 (实例级防火墙)
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>└── 网络ACL (子网级防火墙)
+</code></pre></div>
+<h4 id="_22">网络规划原则<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>避免冲突</strong>：VPC网段不与IDC重叠</li>
+<li><strong>预留空间</strong>：建议使用/16或/24掩码</li>
+<li><strong>多AZ部署</strong>：至少两个可用区</li>
+<li><strong>路由精细化</strong>：公有子网vs私有子网</li>
+</ol>
+<h3 id="clb">负载均衡（CLB）<a class="headerlink" href="#clb" title="Permanent link">&para;</a></h3>
+<h4 id="_23">架构层次<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>四层（TGW）</strong>：TCP/UDP，基于DPDK，亿级并发</li>
+<li><strong>七层（STGW）</strong>：HTTP/HTTPS，SSL卸载，内容路由</li>
+</ul>
+<h4 id="_24">调度算法<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>算法</th>
+<th>适用场景</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>加权轮询</td>
+<td>通用场景</td>
+<td>简单高效</td>
+</tr>
+<tr>
+<td>加权最小连接</td>
+<td>长连接业务</td>
+<td>避免积压</td>
+</tr>
+<tr>
+<td>源地址哈希</td>
+<td>会话保持</td>
+<td>同IP固定后端</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_25">高可用配置<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>多可用区部署</strong>：主备AZ</li>
+<li><strong>健康检查</strong>：自动屏蔽故障节点</li>
+<li><strong>全局负载均衡</strong>：DNS+多地域CLB</li>
+</ul>
+<h3 id="cdn">CDN（内容分发网络）<a class="headerlink" href="#cdn" title="Permanent link">&para;</a></h3>
+<h4 id="_26">核心价值<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>静态加速</strong>：80%流量拦截在边缘</li>
+<li><strong>动态加速（ECDN）</strong>：智能路由优化回源</li>
+<li><strong>全球加速</strong>：Anycast就近接入</li>
+</ul>
+<h4 id="_27">缓存策略<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>图片/文件 → 缓存30天
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>JS/CSS → 缓存7天（版本号管理）
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>HTML → 缓存0秒（即时性）
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>API接口 → 不缓存（ECDN优化）
+</code></pre></div>
+<h2 id="23">2.3 存储服务<a class="headerlink" href="#23" title="Permanent link">&para;</a></h2>
+<h3 id="_28">三大存储对比<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>CBS(云硬盘)</th>
+<th>CFS(文件存储)</th>
+<th>COS(对象存储)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>数据模型</strong></td>
+<td>块(Block)</td>
+<td>文件树(File)</td>
+<td>对象(Key-Value)</td>
+</tr>
+<tr>
+<td><strong>访问协议</strong></td>
+<td>iSCSI/NVMe</td>
+<td>NFS/SMB</td>
+<td>HTTP/REST API</td>
+</tr>
+<tr>
+<td><strong>共享能力</strong></td>
+<td>单机独享</td>
+<td>多机共享</td>
+<td>全球共享</td>
+</tr>
+<tr>
+<td><strong>时延</strong></td>
+<td>微秒级</td>
+<td>毫秒级</td>
+<td>取决于网络</td>
+</tr>
+<tr>
+<td><strong>容量</strong></td>
+<td>单盘有上限</td>
+<td>PB级弹性</td>
+<td>无限</td>
+</tr>
+<tr>
+<td><strong>适用场景</strong></td>
+<td>数据库、系统盘</td>
+<td>代码共享、容器存储</td>
+<td>静态网站、备份归档</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cbs">CBS选型<a class="headerlink" href="#cbs" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>高性能云硬盘 → 测试环境
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>通用型SSD → 基础数据库
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>SSD云硬盘 → 高并发数据库
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>增强型SSD → 核心业务系统
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>极速型SSD → 百微秒级时延需求
+</code></pre></div>
+<h3 id="cos">COS生命周期管理<a class="headerlink" href="#cos" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>标准存储(0-30天) → 频繁访问
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    ↓
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>低频存储(30-90天) → 偶尔访问，价格低40%
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    ↓
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>归档存储(90天+) → 极少访问，价格低80%
+</code></pre></div>
+<h2 id="24">2.4 数据库服务<a class="headerlink" href="#24" title="Permanent link">&para;</a></h2>
+<h3 id="mysqlcdb">云数据库MySQL（CDB）<a class="headerlink" href="#mysqlcdb" title="Permanent link">&para;</a></h3>
+<h4 id="_29">数据同步方式<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>RPO</th>
+<th>性能</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>异步复制</td>
+<td>&gt;0</td>
+<td>最高</td>
+<td>非核心业务</td>
+</tr>
+<tr>
+<td>半同步复制</td>
+<td>接近0</td>
+<td>高</td>
+<td><strong>生产环境推荐</strong></td>
+</tr>
+<tr>
+<td>强同步复制</td>
+<td>=0</td>
+<td>中</td>
+<td>金融核心交易</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_30">读写分离架构<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>应用 → 数据库代理(Proxy)
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>         ↓
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    写请求 → 主实例(Master)
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    读请求 → 只读实例(RO1/RO2/RO3)
+</code></pre></div>
+<h3 id="tdsql">TDSQL（分布式数据库）<a class="headerlink" href="#tdsql" title="Permanent link">&para;</a></h3>
+<h4 id="_31">核心架构<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>SQL引擎(Gateway) - 无状态，路由分发
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    ↓
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>SET1(分片A)  SET2(分片B)  SET3(分片C)
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>一主两备      一主两备      一主两备
+</code></pre></div>
+<h4 id="_32">性能公式<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>QPS</strong> = 单分片QPS × 分片数量</li>
+<li><strong>TPS</strong> ≈ 单分片TPS × 70% × 分片数量</li>
+</ul>
+<h3 id="tdsql-c">TDSQL-C（云原生数据库）<a class="headerlink" href="#tdsql-c" title="Permanent link">&para;</a></h3>
+<h4 id="_33">存算分离架构<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>计算层(无状态)
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>主节点(RW) + 只读节点(RO1~RO15)
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    ↓ (仅写Redo Log)
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>存储层(共享存储池)
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>分布式存储节点 - Log is Database
+</code></pre></div>
+<h4 id="_34">核心优势<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>极致弹性</strong>：Serverless模式，按秒计费</li>
+<li><strong>海量存储</strong>：PB级，容量自动扩展</li>
+<li><strong>超高性能</strong>：百万级QPS</li>
+<li><strong>秒级快照</strong>：备份速度极快</li>
+</ul>
+<h3 id="redis">Redis最佳实践<a class="headerlink" href="#redis" title="Permanent link">&para;</a></h3>
+<h4 id="_35">三大痛点与解决方案<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h4>
+<p><strong>1. 缓存雪崩</strong>
+- <strong>现象</strong>：大量Key同时过期或Redis宕机
+- <strong>解决</strong>：
+  - 过期时间随机化：TTL = 10分钟 + Random(1~60秒)
+  - 高可用架构：主从/集群版
+  - 限流降级：网关层拒绝部分请求</p>
+<p><strong>2. 缓存击穿</strong>
+- <strong>现象</strong>：热点Key突然过期，大量请求击穿DB
+- <strong>解决</strong>：
+  - 互斥锁：第一个线程查DB，其他等待
+  - 永不过期：逻辑过期+异步更新</p>
+<p><strong>3. 缓存穿透</strong>
+- <strong>现象</strong>：查询不存在的数据，绕过缓存直达DB
+- <strong>解决</strong>：
+  - 缓存空对象：DB查不到也缓存null
+  - 布隆过滤器：提前判断Key是否存在</p>
+<h2 id="25">2.5 中间件服务<a class="headerlink" href="#25" title="Permanent link">&para;</a></h2>
+<h3 id="tdmq">TDMQ家族选型<a class="headerlink" href="#tdmq" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>产品</th>
+<th>核心场景</th>
+<th>吞吐量</th>
+<th>特性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CKafka</strong></td>
+<td>日志收集、大数据流处理</td>
+<td>百万级TPS</td>
+<td>零拷贝、高吞吐</td>
+</tr>
+<tr>
+<td><strong>RocketMQ</strong></td>
+<td>金融交易、订单系统</td>
+<td>万级TPS</td>
+<td>事务消息、顺序消息</td>
+</tr>
+<tr>
+<td><strong>Pulsar</strong></td>
+<td>跨地域同步、IoT</td>
+<td>万级TPS</td>
+<td>存算分离、多租户</td>
+</tr>
+<tr>
+<td><strong>RabbitMQ</strong></td>
+<td>复杂路由、企业应用</td>
+<td>千/万级TPS</td>
+<td>灵活路由、多语言</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_36">消息队列核心价值<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h3>
+<h4 id="_37">异步解耦性能对比<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>串行处理：写库(100ms) + 发邮件(100ms) + 发短信(100ms) = 300ms
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>并行处理：写库(100ms) + Max(发邮件,发短信) = 200ms
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>异步MQ：写库(100ms) + 写MQ(5ms) = 105ms ✓ 最优
+</code></pre></div>
+<h4 id="_38">秒杀削峰架构<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>100万请求 → 网关限流(放行1万)
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>              ↓
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>          消息队列(蓄水池)
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>              ↓
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>      订单服务(匀速2000/s拉取)
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>              ↓
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>          数据库(安全负载)
+</code></pre></div>
+<h3 id="pulsar">Pulsar订阅模式（必考）<a class="headerlink" href="#pulsar" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>特点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Exclusive</strong></td>
+<td>独占，全局有序</td>
+<td>严格顺序要求</td>
+</tr>
+<tr>
+<td><strong>Failover</strong></td>
+<td>主备切换</td>
+<td>高可用场景</td>
+</tr>
+<tr>
+<td><strong>Shared</strong></td>
+<td>轮询消费，高吞吐</td>
+<td>无顺序要求</td>
+</tr>
+<tr>
+<td><strong>Key_Shared</strong></td>
+<td>相同Key发给同一消费者</td>
+<td><strong>既要吞吐又要顺序</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="26-serverless">2.6 微服务与Serverless<a class="headerlink" href="#26-serverless" title="Permanent link">&para;</a></h2>
+<h3 id="_39">微服务设计原则<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h3>
+<h4 id="akf">AKF扩展立方<a class="headerlink" href="#akf" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>X轴：水平扩展 - 复制实例，负载均衡
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Y轴：业务拆分 - 微服务化，按功能拆分
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>Z轴：数据分区 - Sharding，按用户/地域切片
+</code></pre></div>
+<h3 id="_40">腾讯云微服务产品对比<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>产品</th>
+<th>定位</th>
+<th>核心能力</th>
+<th>适用人群</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TSE</strong></td>
+<td>中间件托管</td>
+<td>网关、Nacos、Zookeeper</td>
+<td>架构师、运维</td>
+</tr>
+<tr>
+<td><strong>TEM</strong></td>
+<td>Serverless应用托管</td>
+<td>自动伸缩、免运维</td>
+<td>开发者</td>
+</tr>
+<tr>
+<td><strong>TSF</strong></td>
+<td>全生命周期平台</td>
+<td>分布式事务、链路追踪</td>
+<td>企业级客户</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scf">SCF（云函数）<a class="headerlink" href="#scf" title="Permanent link">&para;</a></h3>
+<h4 id="_41">核心特性<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>0运维</strong>：无需管理服务器</li>
+<li><strong>极致弹性</strong>：0到10000并发秒级响应</li>
+<li><strong>按需付费</strong>：代码不运行不收费</li>
+</ul>
+<h4 id="_42">冷启动优化<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h4>
+<ul>
+<li>精简代码包体积</li>
+<li>预置并发（付费保留热容器）</li>
+<li>全局变量复用连接</li>
+</ul>
+<h4 id="_43">典型场景<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Web后端：API网关 + SCF + TDSQL-C Serverless
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>文件处理：COS触发 + SCF(图片压缩/转码)
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>定时任务：Timer触发 + SCF(报表生成)
+</code></pre></div>
+<h2 id="27">2.7 监控与日志<a class="headerlink" href="#27" title="Permanent link">&para;</a></h2>
+<h3 id="tcop">腾讯云可观测平台（TCOP）<a class="headerlink" href="#tcop" title="Permanent link">&para;</a></h3>
+<h4 id="_44">三大支柱<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>指标(Metrics) - Prometheus → What happen?
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    ↓
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>链路(Tracing) - APM → Where happen?
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    ↓
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>日志(Logging) - CLS → Why happen?
+</code></pre></div>
+<h4 id="_45">故障排查流程<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>1. 查看全链路大盘 → 发现API成功率下降
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>2. 利用APM定位瓶颈 → 发现Stock-Service耗时长
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>3. 关联日志挖掘根因 → 看到&quot;Connection pool exhausted&quot;
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>4. 定位问题：数据库连接池耗尽
+</code></pre></div>
+<h3 id="cls">CLS（日志服务）<a class="headerlink" href="#cls" title="Permanent link">&para;</a></h3>
+<h4 id="_46">核心概念<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>日志集</strong>：项目管理单元（逻辑分组）</li>
+<li><strong>日志主题</strong>：基本管理单元（配置采集规则）</li>
+<li><strong>主题分区（Shard）</strong>：最小读写单元（决定吞吐）</li>
+<li><strong>机器组</strong>：需要采集日志的服务器集合</li>
+</ul>
+<h4 id="loglistener">LogListener工作原理<a class="headerlink" href="#loglistener" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>inotify监听文件变化
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    ↓
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>读取(Head/Tail) → 处理(分行/过滤/解析)
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    ↓
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>发送(压缩打包) → CLS服务端
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    ↓
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>断点续传(Checkpoint) - 保证数据不丢
+</code></pre></div>
+<hr />
+<h1 id="_47">第三章：云架构设计实践<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h1>
+<h2 id="31">3.1 云上容灾<a class="headerlink" href="#31" title="Permanent link">&para;</a></h2>
+<h3 id="_48">灾备等级标准<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>等级</th>
+<th>RTO</th>
+<th>RPO</th>
+<th>关键特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>等级1</td>
+<td>≥2天</td>
+<td>1-7天</td>
+<td>每周全量备份</td>
+</tr>
+<tr>
+<td>等级2</td>
+<td>≥24小时</td>
+<td>1-7天</td>
+<td>备用场地支持</td>
+</tr>
+<tr>
+<td>等级3</td>
+<td>≥12小时</td>
+<td>数小时-1天</td>
+<td>电子传输支持</td>
+</tr>
+<tr>
+<td>等级4</td>
+<td>数小时-2天</td>
+<td>数小时-1天</td>
+<td>完整设备就绪</td>
+</tr>
+<tr>
+<td>等级5</td>
+<td>数分钟-2天</td>
+<td>0-30分钟</td>
+<td>实时数据传输</td>
+</tr>
+<tr>
+<td>等级6</td>
+<td>数分钟</td>
+<td>=0</td>
+<td>数据零丢失</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_49">两地三中心架构<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>地域A(北京) - 同城双活
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>├── 可用区1(主中心) - 业务主节点
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>└── 可用区2(备中心) - 业务备节点
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>    ↓ (强同步/半同步)
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>地域B(上海) - 异地灾备
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>└── 可用区1(灾备中心) - 异步复制
+</code></pre></div>
+<h3 id="_50">多云容灾策略<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h3>
+<p><strong>半双活</strong>：主云100%流量，备云仅同步数据
+<strong>全双活</strong>：两朵云同时承担流量（50:50）</p>
+<h2 id="32">3.2 性能优化<a class="headerlink" href="#32" title="Permanent link">&para;</a></h2>
+<h3 id="_51">全链路优化策略<a class="headerlink" href="#_51" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>用户接入层：HttpDNS/GSLB - 智能解析，就近接入
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    ↓
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>内容分发层：CDN/ECDN - 静态缓存+动态路由
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>    ↓
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>应用接入层：CLB - 七层转发，SSL卸载
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>    ↓
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>应用服务层：CVM/TKE - 异步化，无状态设计
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>    ↓
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>缓存层：Redis - 热点缓存，读写分离
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>    ↓
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>中间件层：TDMQ - 削峰填谷，解耦
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>    ↓
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>数据层：读写分离/分库分表 - 提升吞吐
+</code></pre></div>
+<h3 id="cdn_1">CDN核心优化<a class="headerlink" href="#cdn_1" title="Permanent link">&para;</a></h3>
+<h4 id="gslb">GSLB智能调度<a class="headerlink" href="#gslb" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>用户请求 → GSLB判断
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>    ├── 地理位置(北京)
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    ├── 运营商(联通)
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>    ├── 节点负载(CPU/带宽)
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>    └── 链路质量(延迟/丢包)
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>        ↓
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>    选择最优节点
+</code></pre></div>
+<h4 id="ecdn">动态加速（ECDN）<a class="headerlink" href="#ecdn" title="Permanent link">&para;</a></h4>
+<ul>
+<li>链路优化：长连接池，避免握手</li>
+<li>智能路由：绕过拥堵节点</li>
+<li>协议优化：QUIC协议，弱网稳定</li>
+</ul>
+<h3 id="redis_1">Redis性能优化<a class="headerlink" href="#redis_1" title="Permanent link">&para;</a></h3>
+<h4 id="cache-aside-pattern">读写策略（Cache Aside Pattern）<a class="headerlink" href="#cache-aside-pattern" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>读：先读Cache → 命中返回
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>           ↓ 未命中
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>       读DB → 写Cache → 返回
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>写：先更新DB → 删除Cache（注意是删除，不是更新）
+</code></pre></div>
+<h4 id="key">大Key拆分<a class="headerlink" href="#key" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>大Hash表 H_KEY
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>    ↓ 拆分
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>H_KEY_1, H_KEY_2, H_KEY_3...
+</code></pre></div>
+<h4 id="key_1">热Key优化<a class="headerlink" href="#key_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>读写分离：增加只读副本</li>
+<li>本地缓存：Ehcache/Guava</li>
+<li>Key复制：HotKey_1, HotKey_2...分散到不同分片</li>
+</ul>
+<h2 id="33">3.3 应用容器化改造<a class="headerlink" href="#33" title="Permanent link">&para;</a></h2>
+<h3 id="_52">改造六步法<a class="headerlink" href="#_52" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>1. 分析与解耦 → 识别依赖，拆分单体
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>2. 镜像准备 → 选择基础镜像，安装运行时
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>3. 配置管理 → ConfigMap/Secret外部化
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>4. 构建与测试 → 编写Dockerfile，单元测试
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>5. K8s编排 → Deployment/Service/Ingress
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>6. 部署与运维 → 发布到TKE，监控日志
+</code></pre></div>
+<h3 id="dockerfile">Dockerfile优化技巧<a class="headerlink" href="#dockerfile" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c"># 多阶段构建</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="k">FROM</span><span class="w"> </span><span class="s">maven:3.8-jdk-11</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">builder</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="k">COPY</span><span class="w"> </span>pom.xml<span class="w"> </span>.
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="k">RUN</span><span class="w"> </span>mvn<span class="w"> </span>dependency:go-offline
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="k">COPY</span><span class="w"> </span>src<span class="w"> </span>./src
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="k">RUN</span><span class="w"> </span>mvn<span class="w"> </span>package<span class="w"> </span>-DskipTests
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="k">FROM</span><span class="w"> </span><span class="s">openjdk:11-jre-slim</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>builder<span class="w"> </span>/app/target/*.jar<span class="w"> </span>app.jar
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a><span class="k">RUN</span><span class="w"> </span>useradd<span class="w"> </span>-m<span class="w"> </span>appuser
+<a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a><span class="k">USER</span><span class="w"> </span><span class="s">appuser</span>
+<a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a><span class="k">ENTRYPOINT</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;java&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-jar&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;app.jar&quot;</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="k8s">K8s资源配置<a class="headerlink" href="#k8s" title="Permanent link">&para;</a></h3>
+<h4 id="qos">QoS等级<a class="headerlink" href="#qos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>条件</th>
+<th>特点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Guaranteed</strong></td>
+<td>request=limit</td>
+<td>资源绝对保障</td>
+<td>核心生产业务</td>
+</tr>
+<tr>
+<td><strong>Burstable</strong></td>
+<td>request&lt;limit</td>
+<td>允许短时突发</td>
+<td>大多数Web服务</td>
+</tr>
+<tr>
+<td><strong>BestEffort</strong></td>
+<td>未设置</td>
+<td>最先被驱逐</td>
+<td>开发测试</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_53">健康检查<a class="headerlink" href="#_53" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nt">livenessProbe</span><span class="p">:</span><span class="w">  </span><span class="c1"># 存活检查，失败重启容器</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">  </span><span class="nt">httpGet</span><span class="p">:</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/health</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="w">  </span><span class="nt">initialDelaySeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="w">  </span><span class="nt">periodSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a><span class="nt">readinessProbe</span><span class="p">:</span><span class="w">  </span><span class="c1"># 就绪检查，成功才接收流量</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a><span class="w">  </span><span class="nt">httpGet</span><span class="p">:</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a><span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/ready</span>
+<a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span>
+<a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a><span class="w">  </span><span class="nt">initialDelaySeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a><span class="w">  </span><span class="nt">periodSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+</code></pre></div>
+<h2 id="34-ai">3.4 AI与大模型<a class="headerlink" href="#34-ai" title="Permanent link">&para;</a></h2>
+<h3 id="ai">AI大模型四要素<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>人工智能(AI)
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>    ↓
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>海量数据(Data) - Common Crawl, Wikipedia
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>    ↓
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>深度学习算法(Algorithm) - Transformer架构
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>    ↓
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>超强算力(Compute) - GPU/TPU集群
+</code></pre></div>
+<h3 id="llm">LLM推理瓶颈<a class="headerlink" href="#llm" title="Permanent link">&para;</a></h3>
+<h4 id="kv-cache">KV Cache显存计算<a class="headerlink" href="#kv-cache" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>KV Cache Size = 2 × Layers × Hidden Size × Seq Length × Batch Size × Bytes
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>示例：Batch=64, Seq=2048 → 可能占用120GB显存
+</code></pre></div>
+<h3 id="ai_1">腾讯云AI基础设施<a class="headerlink" href="#ai_1" title="Permanent link">&para;</a></h3>
+<h4 id="_54">星脉高性能网络<a class="headerlink" href="#_54" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>TiTa协议</strong>：微秒级拥塞控制，90%负载零丢包</li>
+<li><strong>TCCL通信库</strong>：拓扑感知，集合通信效率&gt;90%</li>
+<li><strong>多轨道架构</strong>：3.2Tbps超高带宽</li>
+<li><strong>光运维GOM</strong>：1分钟发现，3分钟定位，5分钟自愈</li>
+</ul>
+<h4 id="qgpu">qGPU算力共享<a class="headerlink" href="#qgpu" title="Permanent link">&para;</a></h4>
+<ul>
+<li>资源隔离：显存MB级、算力1%粒度</li>
+<li>灵活切分：一张A100切分给多个Pod</li>
+<li>异构混部：在线推理+离线训练混部</li>
+</ul>
+<h4 id="ai_2">国产化AI芯片<a class="headerlink" href="#ai_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>芯片</th>
+<th>定位</th>
+<th>对标</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>腾讯紫霄V1</td>
+<td>AI推理专用</td>
+<td>NVIDIA A10/L4</td>
+<td>7B以下模型推理</td>
+</tr>
+<tr>
+<td>华为昇腾910B</td>
+<td>AI训练与推理</td>
+<td>NVIDIA A800/A100</td>
+<td>千亿参数大模型</td>
+</tr>
+<tr>
+<td>Intel Gaudi 2</td>
+<td>高性价比训练</td>
+<td>NVIDIA A100</td>
+<td>大模型训练/微调</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="_55">第四章：云安全体系<a class="headerlink" href="#_55" title="Permanent link">&para;</a></h1>
+<h2 id="41">4.1 等级保护<a class="headerlink" href="#41" title="Permanent link">&para;</a></h2>
+<h3 id="20">等保2.0五步流程<a class="headerlink" href="#20" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>1. 定级 → 编写《定级报告》
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>    ↓
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>2. 备案 → 公安网安部门备案
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>    ↓
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>3. 建设整改 → 采购安全设备，完善制度
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>    ↓
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>4. 等级测评 → 第三方测评机构（70分以上通过）
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>    ↓
+<a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>5. 监督检查 → 公安定期/不定期检查
+</code></pre></div>
+<h3 id="_56">等保五级划分<a class="headerlink" href="#_56" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>等级</th>
+<th>侵害客体</th>
+<th>侵害程度</th>
+<th>典型系统</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一级</td>
+<td>公民、法人</td>
+<td>一般损害</td>
+<td>个人博客</td>
+</tr>
+<tr>
+<td><strong>二级</strong></td>
+<td>社会秩序</td>
+<td>一般损害</td>
+<td><strong>普通企业系统</strong></td>
+</tr>
+<tr>
+<td><strong>三级</strong></td>
+<td>社会秩序/国家安全</td>
+<td>严重/一般损害</td>
+<td><strong>金融交易、政务平台</strong></td>
+</tr>
+<tr>
+<td>四级</td>
+<td>国家安全</td>
+<td>严重损害</td>
+<td>能源、电力、交通</td>
+</tr>
+<tr>
+<td>五级</td>
+<td>国家安全</td>
+<td>特别严重损害</td>
+<td>核心涉密系统</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_57">一个中心，三重防护<a class="headerlink" href="#_57" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>安全管理中心(SSC)
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>    ↓ 管理&amp;监控
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>┌─────────────────────┐
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>│ 安全通信网络         │ - HTTPS加密、VPN
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>│ 安全区域边界         │ - 云防火墙、WAF、DDoS防护
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>│ 安全计算环境         │ - 主机安全、数据加密、身份鉴别
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>└─────────────────────┘
+</code></pre></div>
+<h2 id="42">4.2 纵深防御体系<a class="headerlink" href="#42" title="Permanent link">&para;</a></h2>
+<h3 id="_58">一个中心，三道防线<a class="headerlink" href="#_58" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>云安全中心(SSC) - 统一管理、态势感知
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>    ↓
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>第一道防线：云防火墙(CFW)
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>    - 暴露面收敛
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>    - 虚拟补丁
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>    - 网络蜜罐
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>    ↓
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>第二道防线：WAF
+<a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>    - Web防护(SQL注入/XSS)
+<a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a>    - Bot管理
+<a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a>    - CC防护
+<a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a>    ↓
+<a id="__codelineno-30-13" name="__codelineno-30-13" href="#__codelineno-30-13"></a>第三道防线：主机安全(CWP)
+<a id="__codelineno-30-14" name="__codelineno-30-14" href="#__codelineno-30-14"></a>    - 漏洞扫描与修复
+<a id="__codelineno-30-15" name="__codelineno-30-15" href="#__codelineno-30-15"></a>    - 木马查杀
+<a id="__codelineno-30-16" name="__codelineno-30-16" href="#__codelineno-30-16"></a>    - 基线检查
+</code></pre></div>
+<h3 id="_59">数据安全治理五大支柱<a class="headerlink" href="#_59" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>法律合规体系 - 网络安全法/数据安全法
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>    ↓
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>组织保障体系 - 数据安全委员会
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>    ↓
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>风险治理流程 - 资产清查→风险评估→风险治理→持续运营
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>    ↓
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>风险治理技术 - 识别(DSGC)→保护(KMS)→监控(审计)→响应(备份)
+<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>    ↓
+<a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>安全基础设施 - 物理安全、网络安全、计算安全
+</code></pre></div>
+<h3 id="_60">零信任安全模型<a class="headerlink" href="#_60" title="Permanent link">&para;</a></h3>
+<h4 id="_61">核心理念<a class="headerlink" href="#_61" title="Permanent link">&para;</a></h4>
+<p><strong>"永不信任，始终验证"</strong></p>
+<h4 id="ioa">腾讯iOA三要素<a class="headerlink" href="#ioa" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>可信身份 - MFA多因子认证、动态鉴权
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>    ↓
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>可信终端 - 终端准入、微隔离
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>    ↓
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>可信应用 - 细粒度访问控制、安全网关
+</code></pre></div>
+<h2 id="43">4.3 网络与边界安全<a class="headerlink" href="#43" title="Permanent link">&para;</a></h2>
+<h3 id="_62">云防火墙三种边界<a class="headerlink" href="#_62" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>互联网边界防火墙 - 管控公网IP与互联网流量(南北向)
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>    ↓
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>NAT边界防火墙 - 管控私网通过NAT访问互联网
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>    ↓
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>VPC间防火墙 - 管控不同VPC内网互通(东西向)
+</code></pre></div>
+<h3 id="ddos">DDoS防护产品矩阵<a class="headerlink" href="#ddos" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>产品</th>
+<th>防护能力</th>
+<th>接入方式</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基础防护</td>
+<td>2-10Gbps</td>
+<td>默认开启</td>
+<td>免费基础防护</td>
+</tr>
+<tr>
+<td>高防包</td>
+<td>定制</td>
+<td>直接绑定云资源IP</td>
+<td>腾讯云资源</td>
+</tr>
+<tr>
+<td>高防IP</td>
+<td>定制</td>
+<td>DNS解析指向高防IP</td>
+<td>非腾讯云/隐藏源站</td>
+</tr>
+</tbody>
+</table>
+<h3 id="waf">WAF部署模式<a class="headerlink" href="#waf" title="Permanent link">&para;</a></h3>
+<p><strong>SaaS型WAF</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>用户 → DNS(CNAME) → WAF集群 → 源站
+</code></pre></div></p>
+<p><strong>CLB-WAF</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>用户 → CLB(一键开启WAF) → 后端CVM
+</code></pre></div></p>
+<h3 id="ssltls">SSL/TLS握手流程<a class="headerlink" href="#ssltls" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>1. ClientHello - 客户端发送支持的协议、加密套件、随机数A
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>2. ServerHello - 服务端返回证书、随机数B
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>3. 验证证书 - 客户端验证证书合法性
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>4. Pre-Master Secret - 客户端生成随机数C，用服务器公钥加密发送
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>5. 生成会话密钥 - 双方用A、B、C生成对称密钥
+<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>6. 加密通信 - 后续使用会话密钥对称加密
+</code></pre></div>
+<h2 id="44">4.4 计算环境安全<a class="headerlink" href="#44" title="Permanent link">&para;</a></h2>
+<h3 id="cwp">主机安全（CWP）四大环节<a class="headerlink" href="#cwp" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>预防(Prevention)
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>- 资产清点、漏洞管理、基线检查
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>    ↓
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>保护(Protection)
+<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>- 防暴力破解、防网页篡改、登录防护
+<a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a>    ↓
+<a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a>检测(Detection)
+<a id="__codelineno-37-8" name="__codelineno-37-8" href="#__codelineno-37-8"></a>- 木马查杀、异常登录检测、WebShell检测
+<a id="__codelineno-37-9" name="__codelineno-37-9" href="#__codelineno-37-9"></a>    ↓
+<a id="__codelineno-37-10" name="__codelineno-37-10" href="#__codelineno-37-10"></a>响应(Response)
+<a id="__codelineno-37-11" name="__codelineno-37-11" href="#__codelineno-37-11"></a>- 隔离主机、封禁IP、自动修复漏洞
+</code></pre></div>
+<h3 id="tcss">容器安全（TCSS）全生命周期<a class="headerlink" href="#tcss" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>构建(Build) - 镜像扫描(漏洞/病毒/敏感信息)
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>    ↓
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>分发(Ship) - 仓库安全(TCR/CCR/Harbor)
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>    ↓
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>运行(Run) - 运行时安全(逃逸检测/异常进程/反弹Shell)
+</code></pre></div>
+<h3 id="bh">堡垒机（BH）核心功能<a class="headerlink" href="#bh" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>认证管理 - MFA多因子认证、LDAP集成
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>    ↓
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>权限管理 - 细粒度授权、命令控制
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>    ↓
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>操作审计 - 全程录像、指令检索
+</code></pre></div>
+<h3 id="das">数据安全审计（DAS）<a class="headerlink" href="#das" title="Permanent link">&para;</a></h3>
+<p><strong>核心能力</strong>
+- 全量审计：记录所有SQL操作（包括SELECT）
+- 威胁检测：SQL注入、高危操作、敏感数据访问
+- 溯源取证：还原安全事件全貌</p>
+<h3 id="dsgc">数据安全治理中心（DSGC）<a class="headerlink" href="#dsgc" title="Permanent link">&para;</a></h3>
+<p><strong>治理流程</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>1. 资产发现 - 自动扫描CDB/TDSQL/COS
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>2. 敏感数据识别 - AI识别身份证/手机号/银行卡
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>3. 分类分级 - L1/L2/L3/L4打标
+<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>4. 风险评估 - 检测未加密/未脱敏/权限过大
+</code></pre></div></p>
+<hr />
+<h1 id="_63">第五章：云迁移与成本管理<a class="headerlink" href="#_63" title="Permanent link">&para;</a></h1>
+<h2 id="51">5.1 迁移方法论<a class="headerlink" href="#51" title="Permanent link">&para;</a></h2>
+<h3 id="4p">标准化迁移流程（4P模型）<a class="headerlink" href="#4p" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>1. 准备阶段(Preparation)
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>   - 组建团队、目标对齐、初步调研
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>   ↓
+<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>2. 规划设计(Planning)
+<a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>   - 架构设计、迁移方案、资源清单
+<a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a>   ↓
+<a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a>3. 实施阶段(Process)
+<a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a>   - 环境搭建、数据迁移、应用部署
+<a id="__codelineno-41-9" name="__codelineno-41-9" href="#__codelineno-41-9"></a>   ↓
+<a id="__codelineno-41-10" name="__codelineno-41-10" href="#__codelineno-41-10"></a>4. 验收阶段(Product Check)
+<a id="__codelineno-41-11" name="__codelineno-41-11" href="#__codelineno-41-11"></a>   - 功能测试、性能测试、业务割接
+</code></pre></div>
+<h3 id="_64">迁移策略对比<a class="headerlink" href="#_64" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>策略</th>
+<th>停机时间</th>
+<th>复杂度</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>停服迁移</strong></td>
+<td>数小时-数天</td>
+<td>低</td>
+<td>非核心业务、初次上云</td>
+</tr>
+<tr>
+<td><strong>平滑迁移</strong></td>
+<td>秒级-分钟级</td>
+<td>高</td>
+<td>核心交易、7x24业务</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_65">割接方案设计<a class="headerlink" href="#_65" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>割接前准备
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>- 全量演练、数据校验、环境封网
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>    ↓
+<a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>割接流程
+<a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>1. 停写 - 源端只读模式
+<a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>2. 追平 - 等待增量同步完成
+<a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a>3. 切换 - 修改DNS/CLB配置
+<a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a>4. 验证 - 核心业务拨测
+<a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a>    ↓
+<a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a>回滚机制
+<a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a>- 触发条件：数据不一致/业务报错/性能下降
+<a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a>- 操作：切回DNS指向源端
+</code></pre></div>
+<h2 id="52">5.2 迁移工具矩阵<a class="headerlink" href="#52" title="Permanent link">&para;</a></h2>
+<h3 id="_66">云组件映射表<a class="headerlink" href="#_66" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>阿里云</th>
+<th>AWS</th>
+<th>腾讯云</th>
+<th>迁移工具</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>计算</td>
+<td>ECS</td>
+<td>EC2</td>
+<td><strong>CVM</strong></td>
+<td>HyperMotion</td>
+</tr>
+<tr>
+<td>容器</td>
+<td>ACK</td>
+<td>EKS</td>
+<td><strong>TKE</strong></td>
+<td>Velero</td>
+</tr>
+<tr>
+<td>对象存储</td>
+<td>OSS</td>
+<td>S3</td>
+<td><strong>COS</strong></td>
+<td>MSP</td>
+</tr>
+<tr>
+<td>数据库</td>
+<td>RDS</td>
+<td>RDS</td>
+<td><strong>CDB/TDSQL</strong></td>
+<td><strong>DTS</strong></td>
+</tr>
+<tr>
+<td>缓存</td>
+<td>Redis</td>
+<td>ElastiCache</td>
+<td><strong>Redis</strong></td>
+<td>DTS</td>
+</tr>
+<tr>
+<td>消息队列</td>
+<td>Kafka</td>
+<td>MSK</td>
+<td><strong>CKafka</strong></td>
+<td>MirrorMaker</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_67">主机迁移三种模式<a class="headerlink" href="#_67" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>1. 重新部署(Re-deploy)
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>   - 适用：无状态应用
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>   - 方法：新购CVM，重新运行CI/CD
+<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>
+<a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a>2. 镜像迁移(Image Import)
+<a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a>   - 适用：需保留OS配置
+<a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a>   - 方法：制作镜像(RAW/QCOW2)，导入腾讯云
+<a id="__codelineno-43-8" name="__codelineno-43-8" href="#__codelineno-43-8"></a>
+<a id="__codelineno-43-9" name="__codelineno-43-9" href="#__codelineno-43-9"></a>3. 在线热迁移(Live Migration)
+<a id="__codelineno-43-10" name="__codelineno-43-10" href="#__codelineno-43-10"></a>   - 适用：海量服务器，业务敏感
+<a id="__codelineno-43-11" name="__codelineno-43-11" href="#__codelineno-43-11"></a>   - 工具：HyperMotion/Go2TencentCloud
+</code></pre></div>
+<h3 id="k8s_1">K8s迁移方案<a class="headerlink" href="#k8s_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>1. 环境准备 - 创建TKE集群
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>2. 镜像迁移 - image-transfer同步到TCR
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>3. 资源迁移 - Velero备份/恢复Deployment/Service
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a>4. 持久化数据 - 快照/存储迁移工具
+</code></pre></div>
+<h3 id="dts">数据库迁移（DTS）<a class="headerlink" href="#dts" title="Permanent link">&para;</a></h3>
+<p><strong>典型流程</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>1. 结构迁移 - 自动创建表和索引
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>2. 全量迁移 - 搬迁存量数据
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>3. 增量同步 - 持续同步Oplog/Binlog
+<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>4. 校验与切换 - 停写、校验、切换连接
+</code></pre></div></p>
+<h3 id="redis_2">Redis迁移三种策略<a class="headerlink" href="#redis_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>策略</th>
+<th>适用场景</th>
+<th>流程</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>重建迁移</td>
+<td>数据量小</td>
+<td>新建Redis，业务双写</td>
+</tr>
+<tr>
+<td>停机迁移</td>
+<td>数据量中等</td>
+<td>导出RDB → redis-port导入</td>
+</tr>
+<tr>
+<td><strong>在线热迁移</strong></td>
+<td><strong>大数据量</strong></td>
+<td><strong>DTS全量+增量同步</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_68">大数据迁移<a class="headerlink" href="#_68" title="Permanent link">&para;</a></h3>
+<p><strong>HDFS数据迁移</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>DistCP - Hadoop分布式复制
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>hadoop distcp hdfs://src:8020/data hdfs://dst:8020/data
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>
+<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a>冷热分离 - 历史数据迁移到COS，热数据迁移到新HDFS
+</code></pre></div></p>
+<p><strong>Hive元数据迁移</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>1. mysqldump导出Metastore
+<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>2. 修改Location字段指向新HDFS
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>3. 导入目标Metastore
+</code></pre></div></p>
+<h2 id="53-finops">5.3 成本管理（FinOps）<a class="headerlink" href="#53-finops" title="Permanent link">&para;</a></h2>
+<h3 id="_69">四大计费模式<a class="headerlink" href="#_69" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>价格</th>
+<th>灵活性</th>
+<th>适用场景</th>
+<th>类比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>包年包月</td>
+<td>⭐</td>
+<td>⭐⭐</td>
+<td>核心业务、长期稳定</td>
+<td>租房(年签)</td>
+</tr>
+<tr>
+<td>按量计费</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>突发流量、临时测试</td>
+<td>住酒店</td>
+</tr>
+<tr>
+<td>竞价实例</td>
+<td>⭐(1折)</td>
+<td>⭐</td>
+<td>离线计算、可中断</td>
+<td>特价尾房</td>
+</tr>
+<tr>
+<td>预留实例</td>
+<td>⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>配合按量使用</td>
+<td>会员卡</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_70">成本优化策略<a class="headerlink" href="#_70" title="Permanent link">&para;</a></h3>
+<h4 id="_71">混合计费策略<a class="headerlink" href="#_71" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>电商平时10万日活，大促100万日活
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>
+<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a>优化前：购买100台包年包月 → 浪费90台
+<a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a>优化后：
+<a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a>- 基线层：10台包年包月(覆盖日常)
+<a id="__codelineno-48-6" name="__codelineno-48-6" href="#__codelineno-48-6"></a>- 弹性层：90台按量/竞价(大促自动扩容)
+<a id="__codelineno-48-7" name="__codelineno-48-7" href="#__codelineno-48-7"></a>效果：成本降低60%+
+</code></pre></div>
+<h4 id="_72">资源休眠<a class="headerlink" href="#_72" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>开发测试环境
+<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>- 工作日10:00-19:00使用
+<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a>- 配置定时任务：20:00关机，09:00开机
+<a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a>- 每周168小时 → 45小时
+<a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a>- 节省73%成本
+</code></pre></div>
+<h4 id="_73">存储降冷<a class="headerlink" href="#_73" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>COS生命周期管理
+<a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a>0-30天：标准存储(频繁访问)
+<a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a>30-90天：低频存储(价格低40%)
+<a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a>90天+：归档存储(价格低80%)
+</code></pre></div>
+<h3 id="_74">竞价实例最佳实践<a class="headerlink" href="#_74" title="Permanent link">&para;</a></h3>
+<p><strong>机制</strong>
+- 闲置算力以10%-20%价格出售
+- 资源紧张时提前2分钟通知回收</p>
+<p><strong>适用场景</strong>
+- 无状态应用：Web服务、容器节点
+- 断点续传：大数据计算支持Checkpoint
+- 混合部署：20%包年包月(保底) + 80%竞价(降本)</p>
+<hr />
+<h1 id="_75">核心考点速记<a class="headerlink" href="#_75" title="Permanent link">&para;</a></h1>
+<h2 id="_76">必考知识点清单<a class="headerlink" href="#_76" title="Permanent link">&para;</a></h2>
+<h3 id="1">1. 云计算基础<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] NIST云计算定义五大特征</li>
+<li>[ ] IaaS/PaaS/SaaS区别与腾讯云产品对应</li>
+<li>[ ] 公有云/私有云/混合云适用场景</li>
+<li>[ ] 信创2+8+N体系</li>
+</ul>
+<h3 id="2">2. 架构设计原则<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] 六大设计原则（合理部署/业务持续/弹性扩展/性能效率/安全合规/成本优化）</li>
+<li>[ ] AKF扩展立方（X/Y/Z轴）</li>
+<li>[ ] 无状态设计要求</li>
+</ul>
+<h3 id="3">3. 计算与容器<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] CVM实例规格选型（S/C/M/IT/GN）</li>
+<li>[ ] 计费模式对比（包年包月/按量/竞价）</li>
+<li>[ ] AS无状态设计（Session外置Redis）</li>
+<li>[ ] TKE网络模式对比（Global Router/VPC-CNI/Cilium）</li>
+<li>[ ] Service转发模式（IPVS/IPTables）</li>
+</ul>
+<h3 id="4">4. 网络服务<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] VPC核心组件（子网/路由表/安全组/ACL）</li>
+<li>[ ] CLB四层/七层架构（TGW/STGW）</li>
+<li>[ ] 负载均衡算法（轮询/最小连接/源地址哈希）</li>
+<li>[ ] CDN工作原理（GSLB智能调度）</li>
+<li>[ ] ECDN动态加速原理</li>
+</ul>
+<h3 id="5">5. 存储服务<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] CBS/CFS/COS三大存储对比</li>
+<li>[ ] CBS选型（高性能/SSD/增强型/极速型）</li>
+<li>[ ] COS生命周期管理（标准/低频/归档）</li>
+<li>[ ] 三副本vs纠删码</li>
+</ul>
+<h3 id="6">6. 数据库服务<a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] CDB数据同步方式（异步/半同步/强同步）</li>
+<li>[ ] 读写分离架构（数据库代理）</li>
+<li>[ ] TDSQL架构（SQL引擎+SET）</li>
+<li>[ ] TDSQL-C存算分离（Log is Database）</li>
+<li>[ ] Redis三大痛点（雪崩/击穿/穿透）</li>
+</ul>
+<h3 id="7">7. 中间件服务<a class="headerlink" href="#7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] TDMQ家族选型（CKafka/RocketMQ/Pulsar/RabbitMQ）</li>
+<li>[ ] MQ三大价值（解耦/削峰/异步）</li>
+<li>[ ] Pulsar四种订阅模式（Exclusive/Failover/Shared/Key_Shared）</li>
+<li>[ ] RocketMQ事务消息</li>
+</ul>
+<h3 id="8-serverless">8. 微服务与Serverless<a class="headerlink" href="#8-serverless" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] TSE/TEM/TSF产品对比</li>
+<li>[ ] SCF冷启动优化</li>
+<li>[ ] SCF典型场景（Web后端/文件处理/定时任务）</li>
+</ul>
+<h3 id="9">9. 监控与日志<a class="headerlink" href="#9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] 可观测性三大支柱（Metrics/Tracing/Logging）</li>
+<li>[ ] CLS核心概念（日志集/日志主题/分区/机器组）</li>
+<li>[ ] LogListener工作原理（inotify/断点续传）</li>
+</ul>
+<h3 id="10">10. 容灾与性能优化<a class="headerlink" href="#10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] 灾备等级标准（1-6级）</li>
+<li>[ ] RTO/RPO定义</li>
+<li>[ ] 两地三中心架构</li>
+<li>[ ] 全链路优化策略</li>
+<li>[ ] 缓存三大痛点解决方案</li>
+</ul>
+<h3 id="11_1">11. 容器化改造<a class="headerlink" href="#11_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] 改造六步法</li>
+<li>[ ] Dockerfile优化技巧（多阶段构建）</li>
+<li>[ ] K8s QoS等级（Guaranteed/Burstable/BestEffort）</li>
+<li>[ ] 健康检查（Liveness/Readiness）</li>
+</ul>
+<h3 id="12-ai">12. AI与大模型<a class="headerlink" href="#12-ai" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] AI大模型四要素</li>
+<li>[ ] KV Cache显存计算</li>
+<li>[ ] 星脉网络核心技术</li>
+<li>[ ] qGPU算力共享</li>
+<li>[ ] 国产化AI芯片对比</li>
+</ul>
+<h3 id="13_1">13. 安全体系<a class="headerlink" href="#13_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] 等保2.0五步流程（定级/备案/建设/测评/检查）</li>
+<li>[ ] 等保五级划分</li>
+<li>[ ] 一个中心三重防护</li>
+<li>[ ] 纵深防御三道防线（云防火墙/WAF/主机安全）</li>
+<li>[ ] 数据安全治理五大支柱</li>
+<li>[ ] 零信任三要素（可信身份/终端/应用）</li>
+</ul>
+<h3 id="14">14. 网络与边界安全<a class="headerlink" href="#14" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] 云防火墙三种边界</li>
+<li>[ ] DDoS防护产品矩阵</li>
+<li>[ ] WAF部署模式（SaaS/CLB-WAF）</li>
+<li>[ ] SSL/TLS握手流程</li>
+<li>[ ] PKI体系核心组件</li>
+</ul>
+<h3 id="15">15. 计算环境安全<a class="headerlink" href="#15" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] 主机安全四大环节（预防/保护/检测/响应）</li>
+<li>[ ] 容器安全全生命周期（构建/分发/运行）</li>
+<li>[ ] 堡垒机核心功能（认证/权限/审计）</li>
+<li>[ ] 数据安全审计（DAS）</li>
+<li>[ ] 数据安全治理中心（DSGC）</li>
+</ul>
+<h3 id="16">16. 云迁移<a class="headerlink" href="#16" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] 迁移4P模型（Preparation/Planning/Process/Product Check）</li>
+<li>[ ] 停服迁移vs平滑迁移</li>
+<li>[ ] 割接方案设计</li>
+<li>[ ] 云组件映射表</li>
+<li>[ ] 主机迁移三种模式</li>
+<li>[ ] DTS工作流程</li>
+</ul>
+<h3 id="17">17. 成本管理<a class="headerlink" href="#17" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] 四大计费模式对比</li>
+<li>[ ] 混合计费策略</li>
+<li>[ ] 资源休眠</li>
+<li>[ ] 存储降冷</li>
+<li>[ ] 竞价实例最佳实践</li>
+</ul>
+<hr />
+<h2 id="_77">高频考点口诀<a class="headerlink" href="#_77" title="Permanent link">&para;</a></h2>
+<h3 id="8">云计算特征（8个）<a class="headerlink" href="#8" title="Permanent link">&para;</a></h3>
+<p><strong>超虚高高通弹按极</strong>
+- 超大规模、虚拟化、高可靠、高可用、通用性、弹性扩展、按需服务、极其廉价</p>
+<h3 id="6_1">架构设计原则（6个）<a class="headerlink" href="#6_1" title="Permanent link">&para;</a></h3>
+<p><strong>合业弹性安成</strong>
+- 合理部署、业务持续、弹性扩展、性能效率、安全合规、成本优化</p>
+<h3 id="_78">等保五步流程<a class="headerlink" href="#_78" title="Permanent link">&para;</a></h3>
+<p><strong>定备建测查</strong>
+- 定级、备案、建设整改、等级测评、监督检查</p>
+<h3 id="_79">可观测性三大支柱<a class="headerlink" href="#_79" title="Permanent link">&para;</a></h3>
+<p><strong>指链日</strong>
+- 指标(Metrics)、链路(Tracing)、日志(Logging)</p>
+<h3 id="redis_3">Redis三大痛点<a class="headerlink" href="#redis_3" title="Permanent link">&para;</a></h3>
+<p><strong>雪击穿</strong>
+- 缓存雪崩、缓存击穿、缓存穿透</p>
+<h3 id="mq">MQ三大价值<a class="headerlink" href="#mq" title="Permanent link">&para;</a></h3>
+<p><strong>解削异</strong>
+- 解耦、削峰填谷、异步处理</p>
+<h3 id="_80">数据安全治理五大支柱<a class="headerlink" href="#_80" title="Permanent link">&para;</a></h3>
+<p><strong>法组流技基</strong>
+- 法律合规、组织保障、风险治理流程、风险治理技术、安全基础设施</p>
+<hr />
+<h2 id="_81">实战场景题型<a class="headerlink" href="#_81" title="Permanent link">&para;</a></h2>
+<h3 id="1_1">场景1：高可用架构设计<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<p><strong>题目</strong>：某电商平台要求系统可用性99.95%，如何设计架构？</p>
+<p><strong>答案要点</strong>：
+1. 多可用区部署（至少2个AZ）
+2. CLB负载均衡+健康检查
+3. AS弹性伸缩（最小2台）
+4. 数据库主从+读写分离
+5. Redis集群版+持久化
+6. 定期备份+快照策略</p>
+<h3 id="2_1">场景2：性能优化<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
+<p><strong>题目</strong>：某视频网站首页加载慢，如何优化？</p>
+<p><strong>答案要点</strong>：
+1. CDN加速静态资源（图片/视频）
+2. Redis缓存热点数据
+3. 数据库读写分离
+4. 图片懒加载+压缩
+5. 开启HTTP/2
+6. 使用对象存储COS</p>
+<h3 id="3_1">场景3：成本优化<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h3>
+<p><strong>题目</strong>：某企业云账单过高，如何降本？</p>
+<p><strong>答案要点</strong>：
+1. 混合计费：基线包年包月+弹性按量
+2. 竞价实例：离线计算任务
+3. 资源休眠：测试环境定时开关机
+4. 存储降冷：COS生命周期管理
+5. 清理僵尸资源：未挂载云硬盘
+6. 预留实例：长期稳定业务</p>
+<h3 id="4_1">场景4：安全合规<a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h3>
+<p><strong>题目</strong>：某金融系统需要过等保三级，需要哪些安全产品？</p>
+<p><strong>答案要点</strong>：
+1. 云防火墙（边界防护）
+2. WAF（Web防护）
+3. 主机安全CWP（漏洞/木马）
+4. 堡垒机BH（运维审计）
+5. 数据库审计DAS（SQL审计）
+6. 云安全中心SSC（统一管理）
+7. SSL证书（HTTPS加密）</p>
+<h3 id="5_1">场景5：云迁移<a class="headerlink" href="#5_1" title="Permanent link">&para;</a></h3>
+<p><strong>题目</strong>：某企业要将100台服务器从IDC迁移到腾讯云，如何规划？</p>
+<p><strong>答案要点</strong>：
+1. 调研：使用MSP资源扫描工具
+2. 网络：搭建专线/VPN
+3. 数据库：DTS全量+增量同步
+4. 主机：HyperMotion在线热迁移
+5. 存储：COS Migration迁移文件
+6. 割接：分批割接，每批演练
+7. 验收：功能/性能/安全测试</p>
+<hr />
+<h2 id="_82">考前冲刺检查清单<a class="headerlink" href="#_82" title="Permanent link">&para;</a></h2>
+<h3 id="_83">理论知识<a class="headerlink" href="#_83" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] 云计算定义与特征</li>
+<li>[ ] 架构设计六大原则</li>
+<li>[ ] 等保2.0标准</li>
+<li>[ ] 信创体系</li>
+</ul>
+<h3 id="_84">产品能力<a class="headerlink" href="#_84" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] CVM/AS/TKE核心功能</li>
+<li>[ ] VPC/CLB/CDN工作原理</li>
+<li>[ ] CBS/CFS/COS选型</li>
+<li>[ ] CDB/TDSQL/TDSQL-C架构</li>
+<li>[ ] Redis/TDMQ最佳实践</li>
+<li>[ ] SCF/TSE/TEM/TSF区别</li>
+</ul>
+<h3 id="_85">安全合规<a class="headerlink" href="#_85" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] 等保五步流程</li>
+<li>[ ] 纵深防御体系</li>
+<li>[ ] 数据安全治理</li>
+<li>[ ] 零信任模型</li>
+</ul>
+<h3 id="_86">实战能力<a class="headerlink" href="#_86" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] 高可用架构设计</li>
+<li>[ ] 性能优化策略</li>
+<li>[ ] 成本优化方案</li>
+<li>[ ] 云迁移流程</li>
+<li>[ ] 故障排查思路</li>
+</ul>
+<hr />
+<p><strong>祝您考试顺利！</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/AngelSnow1129" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
